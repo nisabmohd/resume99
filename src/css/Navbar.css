@@ -21,7 +21,8 @@
     text-decoration: none;
 }
 .tagsnav a{
-    font-size: 13.85px;
+    font-weight: 500;
+    font-size: 15px;
     text-decoration: none;
     margin: 0 13px;
     color: black;

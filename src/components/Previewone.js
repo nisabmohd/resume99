@@ -1,5 +1,5 @@
 import React from 'react'
-import previmg from '../images/temp-prev3.jpg'
+import previmg from '../images/temp-prev4.jpg'
 import '../css/Prevone.css'
 export default function Previewone() {
     return (

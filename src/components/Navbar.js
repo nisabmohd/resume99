@@ -11,7 +11,6 @@ export default function Navbar() {
                 <a href="/">Templates</a>
                 <a href="/">How it Works ?</a>
                 <a href="/">About</a>
-
             </div>
             <div className="startbtn">
                 <a href="/"><button>Start</button></a>

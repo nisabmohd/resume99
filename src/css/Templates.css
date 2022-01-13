@@ -50,7 +50,16 @@
         width: 85%;
     }
 }
-.templateheader h4{
+.templateheader p{
     width: 80%;
     margin: auto;
+    font-weight: 600;
+}
+@media screen and (max-width:996px) {
+    .templateheader{
+        width: 95%;
+    }
+    .templates img{
+        margin: 20px 19px;
+    }
 }
