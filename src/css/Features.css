@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+.features h2{
+    width: 35%;
+    margin: auto;
+}
+.features{
+    padding: 19px 0;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: rgb(242,245,250);
+
+    width: 100%;
+   
+}
+.templateselbtn3{
+    cursor: pointer;
+    background-color: rgb(190, 109, 190);
+    border: none;
+    outline: none;
+    height: 45px;
+    width: max-content;
+    padding: 0 15px;
+    border-radius: 2px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    color:rgb(255, 255, 255) ;
+    margin: 15px 0;
+}
+.imagebg{
+    width: 40%;
+}
+.getstrd{
+    width: 60%;
+    margin: auto 0;
+}
+.getstrd h2{
+    width: max-content;
+}
+.imagebg img{
+   margin: 29px 0;
+   background: #e0e0e0;
+   box-shadow:  9px 9px 28px #aaaaaa,
+                -9px -9px 28px #ffffff;
+   border-radius: 12px; 
+   width: 325px;
+   height: 420px;
+}
+.ftchild{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    color:rgb(83, 83, 83) ;
+    margin: auto;
+}
+@media screen and (max-width:1030px){
+    .ftchild{
+        display: flex;
+        flex-direction: column;
+    }
+    .getstrd h2{
+        width: 95%;
+    }
+    .getstrd{
+        width: 100%;
+        margin: auto 0;
+    }
+    .imagebg{
+        width: 100%;
+    }
+    .imagebg img{
+        width: 275px;
+    }
+}

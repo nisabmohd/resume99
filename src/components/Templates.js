@@ -1,0 +1,22 @@
+import React from 'react'
+import '../css/Templates.css'
+import tmt1 from '../images/template1.jpg'
+import tmt2 from '../images/template2.jpg'
+import tmt3 from '../images/template3.jpg'
+
+export default function Templates() {
+    return (
+        <div className='templates'>
+            <div className="templateheader">
+                <h2>Beautiful ready-to-use resume templates</h2>
+                <h4>Getting that dream job can seem like an impossible task. We’re here to change that. Give yourself a real advantage with the best online resume maker: created by experts, improved by data, trusted by millions of professionals.</h4>
+                <a href="/"><button className='templateselbtn'>Select Template</button></a>
+            </div>
+            <div className="temtimgs">
+                <img src={tmt1} alt="" />
+                <img src={tmt2} alt="" />
+                <img src={tmt3} alt="" />
+            </div>
+        </div>
+    )
+}
