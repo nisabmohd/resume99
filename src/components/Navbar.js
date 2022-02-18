@@ -1,6 +1,8 @@
 import React from 'react'
 import '../css/Navbar.css'
 import {Link } from "react-router-dom";
+import Button from '@mui/material/Button';
+
 export default function Navbar() {
     return (
         <div className="navbar">
@@ -11,7 +13,8 @@ export default function Navbar() {
               
             </div>
             <div className="startbtn">
-                <Link to="/edit"><button>Start</button></Link>
+                <Link to="/edit" style={{textDecoration:'none'}}><Button variant="contained">Start</Button></Link>
+                
             </div>
         </div>
     )

@@ -2,6 +2,9 @@
     height: 1290px;
     padding-bottom: 19px;
 }
+.resume{
+             border-radius: 9px;
+}
 .header{
     margin-top: 19px;
     font-size: 19px;

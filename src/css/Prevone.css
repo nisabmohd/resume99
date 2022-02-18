@@ -7,7 +7,7 @@
     font-family: 'Ubuntu', sans-serif;
 }
 .Previewone img{
-    width: 520px;
+    width: 699px;
     user-select: none;
     cursor: default;
     border-radius: 10px;
@@ -17,14 +17,13 @@ box-shadow:  9px 9px 28px #aaaaaa,
              -9px -9px 28px #ffffff;
 }
 .targethd{
-    color: rgb(156, 11, 156);
+    color: rgb(25,118,210);
 }
 .headerprevone p{
     width: 35%;
     margin:auto;
-    /* font-size: 14px; */
-    margin-bottom: 19px;
-    font-weight: 600;
+    margin-bottom: 29px;
+    margin-top: 25px;
 }
 .headerprevone{
     padding-top: 9px;
@@ -42,18 +41,4 @@ box-shadow:  9px 9px 28px #aaaaaa,
     .Previewone img{
         width:350px;
     }
-}
-.startbtn1 button{
-    cursor: pointer;
-    background-color: rgb(247, 213, 65);
-    border: none;
-    outline: none;
-    height: 45px;
-    width: fit-content;
-    padding: 0 15px;
-    border-radius: 2.5px;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 13px;
-    font-weight: bold;
-    color:rgb(43, 43, 43) ;
 }

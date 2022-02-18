@@ -55,7 +55,7 @@ export const Edit = () => {
   return <div className='editpage'>
 <Toaster/>
     <div className="salutations">
-      <p style={{ fontWeight: 'bold' }}>Welcome 👋</p>
+      <p style={{ fontWeight: 'bold',fontSize:'20px' }}>Welcome <span style={{fontSize:'40px'}}> 👋</span></p>
       <h2 style={{ marginBottom: '35px' }}>Start building your new resume</h2>
 
       <Box sx={{ width: '44%', margin: 'auto', marginTop: '19px', marginBottom: '19px', display: 'flex', alignItems: 'left' }}>

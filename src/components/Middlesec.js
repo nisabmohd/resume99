@@ -2,7 +2,7 @@ import React from 'react'
 import '../css/Middle.css'
 export const Middlesec = () => {
     return (
-        <div className='middlesec'>
+        <div className='middlesec' style={{marginBottom:'39px'}}>
             <h2> Use this resume template to showcase your skills to recruiters</h2>
             <div className="parasofmid">
                 <div className="parasparents">

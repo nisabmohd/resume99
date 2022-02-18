@@ -6,7 +6,7 @@ import { Box } from '@mui/system';
 export default function Preview() {
     function print(){
         document.getElementById('bodyContent').style.position="absolute"
-        document.getElementById('bodyContent').style.top="-5px"
+        document.getElementById('bodyContent').style.top="-15px"
         document.getElementById('tohide').style.display="none"
 
         window.print()
