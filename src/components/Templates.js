@@ -10,7 +10,7 @@ export default function Templates() {
             <div className="templateheader">
                 <h2>Beautiful ready-to-use resume templates</h2>
                 <p>Getting that dream job can seem like an impossible task. We’re here to change that. Give yourself a real advantage with the best online resume maker: created by experts, improved by data, trusted by millions of professionals.</p>
-                <Link to="/edit"><button className='templateselbtn'>Select Template</button></Link>
+                <Link to="/edit"><button className='templateselbtn'>Let's Start</button></Link>
             </div>
             <div className="temtimgs">
                 <img src={tmt1} alt="" />
