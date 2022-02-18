@@ -4,7 +4,7 @@
 ##  Features
 - Save To PDF
 - User Friendly
-- Strsight Forward
+- Straight Forward
 ## Overview
 
 <img src="images/1.png">
