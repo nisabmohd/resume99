@@ -1,0 +1,87 @@
+.rsbody{
+    height: 1290px;
+    padding-bottom: 19px;
+}
+.header{
+    margin-top: 19px;
+    font-size: 19px;
+    text-align: left;
+    margin-left: 49px;
+}
+.smalltextdown{
+    /* width: 100%; */
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    margin-top: -20px;
+    margin-bottom: 19px;
+    left:49px
+}
+.smalltextdown p{
+    font-size: 13px;
+    margin:3px
+}
+.obj{
+    position: absolute;
+    font-size: 15px;
+    width: 80%;
+    margin: auto;
+    text-align: left;
+    margin-top: 19px;
+    top:139px;
+    left: 49px;
+}
+.objhead{
+    position: absolute;
+    left:49px;
+    top:100px;
+    font-weight: 500;
+}
+.objhead2{
+    position: absolute;
+    left:49px;
+    top:320px
+}
+.objhead3{
+    position: absolute;
+    left:49px;
+    top:450px
+}
+.objhead4{
+    position: absolute;
+    left:49px;
+    top:579px
+}
+.edu{
+    position: absolute;
+    left:49px;
+    top:392px;
+    text-align: left;
+}
+.exp{
+    position: absolute;
+    left:49px;
+    top:521px;
+    text-align: left;
+}
+.award{
+    position: absolute;
+    left:49px;
+    top:652px;
+    text-align: left;
+}
+li{
+    margin-bottom: 9px;
+    font-size: 15px;
+}
+.btnpr{
+    position: absolute;
+    top:1139px;
+    bottom: 9px;
+}
+/* #bodyContent{
+    position: absolute;
+    top:-5px
+} */

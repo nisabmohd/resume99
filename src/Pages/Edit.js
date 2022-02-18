@@ -5,6 +5,7 @@ import Input from '@mui/material/Input';
 import { Box } from '@mui/system';
 import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
+import toast, { Toaster } from 'react-hot-toast';
 import { useState } from 'react';
 export const Edit = () => {
   const navigate = useNavigate();
@@ -23,7 +24,15 @@ export const Edit = () => {
   const [aw2, setAw2] = useState('')
   function handleSubmit() {
     if (fname === '' || lname === '' || phone === '' || email === '' || city === '' || street === '' || overview === '' || edu1 === '' || exp1 === '' || exp2 === '' || edu2 === '' || aw1 === '' || aw2 === '') {
-      alert("Fill all credintials")
+      // toast.error('Fill all credintials');
+      toast.error('Fill all credintials', {
+        duration: 1400,
+        position: 'top-center',
+        style: {
+          color:'white',
+          backgroundColor:'#969595'
+        },
+      });
       return
     }
     else{
@@ -44,7 +53,7 @@ export const Edit = () => {
     }
   }
   return <div className='editpage'>
-
+<Toaster/>
     <div className="salutations">
       <p style={{ fontWeight: 'bold' }}>Welcome 👋</p>
       <h2 style={{ marginBottom: '35px' }}>Start building your new resume</h2>
@@ -53,25 +62,25 @@ export const Edit = () => {
         <h3>Personal Details :</h3>
       </Box>
       <Box sx={{ width: '80%', margin: 'auto', marginTop: '19px', marginBottom: '19px' }}>
-        <FormControl sx={{ width: '55%', margin: 'auto', marginTop: '9px', marginBottom: '9px' }} variant="standard">
+        <FormControl sx={{ width: '55%',minWidth:'320px', margin: 'auto', marginTop: '9px', marginBottom: '9px' }} variant="standard">
           <InputLabel htmlFor="component-simple">First Name </InputLabel>
           <Input value={fname} onChange={(e) => { setFname(e.target.value) }} id="component-simple" />
         </FormControl>
       </Box>
       <Box sx={{ width: '80%', margin: 'auto', marginTop: '19px', marginBottom: '19px' }}>
-        <FormControl sx={{ width: '55%', margin: 'auto', marginTop: '9px', marginBottom: '9px' }} variant="standard">
+        <FormControl sx={{ width: '55%',minWidth:'320px', margin: 'auto', marginTop: '9px', marginBottom: '9px' }} variant="standard">
           <InputLabel htmlFor="component-simple">Last Name </InputLabel>
           <Input value={lname} onChange={(e) => { setLname(e.target.value) }} id="component-simple" />
         </FormControl>
       </Box>
       <Box sx={{ width: '80%', margin: 'auto', marginTop: '19px', marginBottom: '19px' }}>
-        <FormControl sx={{ width: '55%', margin: 'auto', marginTop: '9px', marginBottom: '9px' }} variant="standard">
+        <FormControl sx={{ width: '55%',minWidth:'320px', margin: 'auto', marginTop: '9px', marginBottom: '9px' }} variant="standard">
           <InputLabel htmlFor="component-simple">Phone No.</InputLabel>
           <Input value={phone} onChange={(e) => { setPhone(e.target.value) }} id="component-simple" />
         </FormControl>
       </Box>
       <Box sx={{ width: '80%', margin: 'auto', marginTop: '19px', marginBottom: '19px' }}>
-        <FormControl sx={{ width: '55%', margin: 'auto', marginTop: '9px', marginBottom: '9px' }} variant="standard">
+        <FormControl sx={{ width: '55%',minWidth:'320px', margin: 'auto', marginTop: '9px', marginBottom: '9px' }} variant="standard">
           <InputLabel htmlFor="component-simple">Email Address</InputLabel>
           <Input value={email} onChange={(e) => { setEmail(e.target.value) }} id="component-simple" />
         </FormControl>
@@ -82,13 +91,13 @@ export const Edit = () => {
         <h3>Contact Address :</h3>
       </Box>
       <Box sx={{ width: '80%', margin: 'auto', marginTop: '19px', marginBottom: '19px' }}>
-        <FormControl sx={{ width: '55%', margin: 'auto', marginTop: '9px', marginBottom: '9px' }} variant="standard">
+        <FormControl sx={{ width: '55%',minWidth:'320px', margin: 'auto', marginTop: '9px', marginBottom: '9px' }} variant="standard">
           <InputLabel htmlFor="component-simple">City/Town</InputLabel>
           <Input value={city} onChange={(e) => setCity(e.target.value)} id="component-simple" />
         </FormControl>
       </Box>
       <Box sx={{ width: '80%', margin: 'auto', marginTop: '19px', marginBottom: '19px' }}>
-        <FormControl sx={{ width: '55%', margin: 'auto', marginTop: '9px', marginBottom: '9px' }} variant="standard">
+        <FormControl sx={{ width: '55%',minWidth:'320px', margin: 'auto', marginTop: '9px', marginBottom: '9px' }} variant="standard">
           <InputLabel htmlFor="component-simple">Street/House No.</InputLabel>
           <Input value={street} onChange={(e) => setStreet(e.target.value)} id="component-simple" />
         </FormControl>
@@ -99,7 +108,7 @@ export const Edit = () => {
         <h3>Overview :</h3>
       </Box>
       <Box sx={{ width: '80%', margin: 'auto', marginTop: '19px', marginBottom: '19px' }}>
-        <FormControl sx={{ width: '55%', margin: 'auto', marginTop: '9px', marginBottom: '9px' }} variant="standard">
+        <FormControl sx={{ width: '55%',minWidth:'320px', margin: 'auto', marginTop: '9px', marginBottom: '9px' }} variant="standard">
           {/* <InputLabel htmlFor="component-simple">Street/House No.</InputLabel> */}
           <textarea value={overview} onChange={(e) => setOver(e.target.value)} style={{ backgroundColor: 'transparent', fontSize: '16px', fontFamily: 'Roboto', padding: '9px 6px', outline: 'none', border: '1.25px solid #a4a4a4' }} placeholder="About Yourself .." rows="14" cols="50" />
         </FormControl>
@@ -110,13 +119,13 @@ export const Edit = () => {
         <h3>Education :</h3>
       </Box>
       <Box sx={{ width: '80%', margin: 'auto', marginTop: '19px', marginBottom: '19px' }}>
-        <FormControl sx={{ width: '55%', margin: 'auto', marginTop: '9px', marginBottom: '9px' }} variant="standard">
+        <FormControl sx={{ width: '55%',minWidth:'320px', margin: 'auto', marginTop: '9px', marginBottom: '9px' }} variant="standard">
           <InputLabel htmlFor="component-simple">School Name</InputLabel>
           <Input value={edu1} onChange={(e) => setEdu1(e.target.value)} id="component-simple" />
         </FormControl>
       </Box>
       <Box sx={{ width: '80%', margin: 'auto', marginTop: '19px', marginBottom: '19px' }}>
-        <FormControl sx={{ width: '55%', margin: 'auto', marginTop: '9px', marginBottom: '9px' }} variant="standard">
+        <FormControl sx={{ width: '55%',minWidth:'320px', margin: 'auto', marginTop: '9px', marginBottom: '9px' }} variant="standard">
           <InputLabel htmlFor="component-simple">Degree/Majors</InputLabel>
           <Input value={edu2} onChange={(e) => setEdu2(e.target.value)} id="component-simple" />
         </FormControl>
@@ -127,13 +136,13 @@ export const Edit = () => {
         <h3>Experience :</h3>
       </Box>
       <Box sx={{ width: '80%', margin: 'auto', marginTop: '19px', marginBottom: '19px' }}>
-        <FormControl sx={{ width: '55%', margin: 'auto', marginTop: '9px', marginBottom: '9px' }} variant="standard">
+        <FormControl sx={{ width: '55%',minWidth:'320px', margin: 'auto', marginTop: '9px', marginBottom: '9px' }} variant="standard">
           <InputLabel htmlFor="component-simple">Job Title</InputLabel>
           <Input value={exp1} onChange={(e) => setExp1(e.target.value)} id="component-simple" />
         </FormControl>
       </Box>
       <Box sx={{ width: '80%', margin: 'auto', marginTop: '19px', marginBottom: '19px' }}>
-        <FormControl sx={{ width: '55%', margin: 'auto', marginTop: '9px', marginBottom: '9px' }} variant="standard">
+        <FormControl sx={{ width: '55%',minWidth:'320px', margin: 'auto', marginTop: '9px', marginBottom: '9px' }} variant="standard">
           <InputLabel htmlFor="component-simple">....</InputLabel>
           <Input value={exp2} onChange={(e) => setExp2(e.target.value)} id="component-simple" />
         </FormControl>
@@ -144,13 +153,13 @@ export const Edit = () => {
         <h3>Awards/Acknowledgements :</h3>
       </Box>
       <Box sx={{ width: '80%', margin: 'auto', marginTop: '19px', marginBottom: '19px' }}>
-        <FormControl sx={{ width: '55%', margin: 'auto', marginTop: '9px', marginBottom: '9px' }} variant="standard">
+        <FormControl sx={{ width: '55%',minWidth:'320px', margin: 'auto', marginTop: '9px', marginBottom: '9px' }} variant="standard">
           <InputLabel htmlFor="component-simple">List The Acknowledgments</InputLabel>
           <Input value={aw1} onChange={(e) => setAw1(e.target.value)} id="component-simple" />
         </FormControl>
       </Box>
       <Box sx={{ width: '80%', margin: 'auto', marginTop: '19px', marginBottom: '19px' }}>
-        <FormControl sx={{ width: '55%', margin: 'auto', marginTop: '9px', marginBottom: '9px' }} variant="standard">
+        <FormControl sx={{ width: '55%',minWidth:'320px', margin: 'auto', marginTop: '9px', marginBottom: '9px' }} variant="standard">
           <InputLabel htmlFor="component-simple">....</InputLabel>
           <Input value={aw2} onChange={(e) => setAw2(e.target.value)} id="component-simple" />
         </FormControl>
