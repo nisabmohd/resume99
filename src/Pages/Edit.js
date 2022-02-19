@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, {  } from 'react';
 import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
 import Input from '@mui/material/Input';
@@ -9,13 +9,8 @@ import Alert from '@mui/material/Alert';
 import { useState } from 'react';
 import { Stepperc } from '../components/Stepperc';
 
-export const Edit = (props) => {
+export const Edit = () => {
   const [showerr, setShowerr] = useState(false)
-  useEffect(() => {
-    props.set(60)
-    props.set(95)
-    props.set(100)
-  }, [props])
   const navigate = useNavigate();
   const [fname, setFname] = useState('')
   const [lname, setLname] = useState('')

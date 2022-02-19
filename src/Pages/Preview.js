@@ -1,14 +1,9 @@
-import React, { useEffect } from 'react'
+import React, {  } from 'react'
 import '../css/Preview.css'
 import Button from '@mui/material/Button';
 import { Box } from '@mui/system';
 import { Stepperc } from '../components/Stepperc';
-export default function Preview(props) {
-    useEffect(() => {
-        props.set(60)
-        props.set(95)
-        props.set(100)
-    }, [props])
+export default function Preview() {
     function print() {
         document.getElementById('bodyContent').style.position = "absolute"
         document.getElementById('bodyContent').style.top = "-15px"
