@@ -13,9 +13,10 @@ export default function Navbar() {
               
             </div>
             <div className="startbtn">
-                <Link to="/edit" style={{textDecoration:'none'}}><Button variant="contained">Start</Button></Link>
+                <Link to="/edit" style={{textDecoration:'none'}}><Button variant="outlined">Start</Button></Link>
                 
             </div>
+            
         </div>
     )
 }

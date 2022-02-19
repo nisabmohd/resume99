@@ -1,18 +1,26 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import '../css/Preview.css'
 import Button from '@mui/material/Button';
 import { Box } from '@mui/system';
-
-export default function Preview() {
-    function print(){
-        document.getElementById('bodyContent').style.position="absolute"
-        document.getElementById('bodyContent').style.top="-15px"
-        document.getElementById('tohide').style.display="none"
-
+import { Stepperc } from '../components/Stepperc';
+export default function Preview(props) {
+    useEffect(() => {
+        props.set(60)
+        props.set(95)
+        props.set(100)
+    }, [])
+    function print() {
+        document.getElementById('bodyContent').style.position = "absolute"
+        document.getElementById('bodyContent').style.top = "-15px"
+        document.getElementById('tohide').style.display = "none"
+        document.getElementById('hidestepper').style.display = "none"
         window.print()
     }
     return (
         <div className="rsbody" id="bodyContent">
+            <Box id="hidestepper" sx={{ width: '64%', margin: 'auto', marginTop: '19px', marginBottom: '19px', display: 'flex', alignItems: 'left' }}>
+                <Stepperc step="2" />
+            </Box>
             <div className="resume" style={{ position: 'relative', backgroundColor: 'white', height: '1208px', width: '900px', margin: 'auto' }}>
                 <div className="header">
                     <h1>{localStorage.getItem('fname') + " " + localStorage.getItem('lname')}</h1>
@@ -42,8 +50,9 @@ export default function Preview() {
                     <li>{localStorage.getItem('aw2')}</li>
                 </div>
 
-                <Box id="tohide" className="boxpr" sx={{ width: '80%', margin: 'auto', marginTop: '49px', marginBottom: '19px',paddingBottom:'19px' }}>
-                    <Button className="btnpr" onClick={(e) => { e.preventDefault(); print();}} variant="outlined">Print </Button>
+                <Box id="tohide" className="boxpr" sx={{ width: '80%', margin: 'auto', marginTop: '49px', marginBottom: '19px', paddingBottom: '19px' }}>
+                    <Button className="btnpr" onClick={(e) => { e.preventDefault(); print(); }} variant="outlined">Print </Button>
+
                 </Box>
 
             </div>

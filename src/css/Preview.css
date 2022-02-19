@@ -1,9 +1,9 @@
 .rsbody{
-    height: 1290px;
+    height: 1410px;
     padding-bottom: 19px;
 }
 .resume{
-             border-radius: 9px;
+ border-radius: 9px;
 }
 .header{
     margin-top: 19px;
@@ -84,7 +84,3 @@ li{
     top:1139px;
     bottom: 9px;
 }
-/* #bodyContent{
-    position: absolute;
-    top:-5px
-} */
