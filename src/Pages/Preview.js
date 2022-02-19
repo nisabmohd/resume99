@@ -8,7 +8,7 @@ export default function Preview(props) {
         props.set(60)
         props.set(95)
         props.set(100)
-    }, [])
+    }, [props])
     function print() {
         document.getElementById('bodyContent').style.position = "absolute"
         document.getElementById('bodyContent').style.top = "-15px"

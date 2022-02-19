@@ -15,7 +15,7 @@ export const Edit = (props) => {
     props.set(60)
     props.set(95)
     props.set(100)
-  }, [])
+  }, [props])
   const navigate = useNavigate();
   const [fname, setFname] = useState('')
   const [lname, setLname] = useState('')

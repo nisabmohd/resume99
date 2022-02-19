@@ -8,7 +8,7 @@ export default function Home(props) {
         props.set(60)
         props.set(95)
         props.set(100)
-      },[])
+      },[props])
     return (
         <div className='Home'>
             <Previewone></Previewone>

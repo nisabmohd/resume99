@@ -5,7 +5,7 @@ export const Error = (props) => {
         props.set(60)
         props.set(95)
         props.set(100)
-      },[])
+      },[props])
     return (
         <div style={{userSelect:'none'}}>
             <h1 style={{color:'rgb(25,118,210)',fontSize:'145px',fontFamily:'Roboto'}}>404</h1>
