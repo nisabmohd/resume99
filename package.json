@@ -1,6 +1,5 @@
 {
   "name": "resume-builder",
-  "homepage": "https://nisabmohd.github.io/resume-builder",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
