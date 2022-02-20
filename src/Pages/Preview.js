@@ -10,6 +10,10 @@ export default function Preview() {
         document.getElementById('tohide').style.display = "none"
         document.getElementById('hidestepper').style.display = "none"
         window.print()
+        document.getElementById('bodyContent').style.position = "relative"
+        document.getElementById('bodyContent').style.top = "0px"
+        document.getElementById('tohide').style.display = "block"
+        document.getElementById('hidestepper').style.display = "block"
     }
     return (
         <div className="rsbody" id="bodyContent">
