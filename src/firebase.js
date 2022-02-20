@@ -1,4 +1,5 @@
 import { initializeApp } from "firebase/app";
+import { getStorage } from "firebase/storage";
 const firebaseConfig = {
   apiKey: "AIzaSyBH5ZD1XAzAy8P0bx7FrK2Hsqg164dJHBI",
   authDomain: "resume-builder-c1367.firebaseapp.com",
@@ -9,3 +10,4 @@ const firebaseConfig = {
 };
 
 export const app = initializeApp(firebaseConfig);
+export const storage = getStorage(app);

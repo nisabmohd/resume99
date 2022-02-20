@@ -13,7 +13,7 @@ const steps = [
 export const Stepperc=(props)=>{
     return (
       <Box sx={{ width: '100%',margin:'19px 0' }}>
-        <Stepper activeStep={props.step} alternativeLabel>
+        <Stepper activeStep={parseInt(props.step)} alternativeLabel>
           {steps.map((label) => (
             <Step key={label} variant="primary">
               <StepLabel>{label}</StepLabel>
