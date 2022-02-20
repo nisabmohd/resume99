@@ -13,6 +13,7 @@ import CircularProgress from '@mui/material/CircularProgress';
 import { Stepperc } from '../components/Stepperc';
 import PhotoCamera from '@mui/icons-material/PhotoCamera';
 export const Edit = () => {
+
   const navigate = useNavigate();
   const [showerr, setShowerr] = useState(false)
   const [fname, setFname] = useState('')
@@ -28,6 +29,8 @@ export const Edit = () => {
   const [exp2, setExp2] = useState('')
   const [aw1, setAw1] = useState('')
   const [aw2, setAw2] = useState('')
+  const[textareacount,setTextAreaCount]=useState(0)
+  // const [age,setAge]=useState('')
   const [loading, setLoading] = useState(false)
   const [imagefile, setImagefile] = useState(null)
   const [alertabove, setAlertabove] = useState("")
@@ -36,6 +39,7 @@ export const Edit = () => {
     const image = e.target.files[0];
     if (image.type === 'image/jpeg' || image.type === 'image/jpg' || image.type === 'image/png') {
       setImagefile(image)
+      setShowerr(false)
     }
     else {
       setAlertabove("Invalid image extension")
@@ -54,7 +58,9 @@ export const Edit = () => {
 
       },
       (error) => {
-
+        console.log(error)
+        setAlertabove("Failed to upload image")
+        setShowerr(true)
       },
       () => {
         getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
@@ -64,6 +70,10 @@ export const Edit = () => {
         });
       }
     );
+  }
+  function onTextarea(e){
+    setTextAreaCount(e.target.value.split(' ').length);
+    setOver(e.target.value)
   }
   async function handleSubmit() {
     if (fname === '' || lname === '' || phone === '' || email === '' || city === '' || street === '' || overview === '' || edu1 === '' || exp1 === '' || exp2 === '' || edu2 === '' || aw1 === '' || aw2 === '') {
@@ -75,6 +85,8 @@ export const Edit = () => {
     else {
       setLoading(true)
       setStep("2")
+      // const personage=new Date().getFullYear()-age
+      // sessionStorage.setItem('age',personage)
       sessionStorage.setItem('fname', fname)
       sessionStorage.setItem('lname', lname)
       sessionStorage.setItem('phone', phone)
@@ -91,9 +103,9 @@ export const Edit = () => {
       if (imagefile) {
         await upload(imagefile)
       }
-      setTimeout(()=>{
+      setTimeout(() => {
         navigate("/prev")
-      },4200)
+      }, 4200)
     }
   }
   const style = {
@@ -102,7 +114,7 @@ export const Edit = () => {
   return <div className='editpage'>
     {
       showerr ? (<Alert severity="error" sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-        <italic>{alertabove}</italic>
+        <span>{alertabove}</span>
       </Alert>) : (<>
         {/* <Alert severity="info" sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
           <italic style={{ marginTop: '3px' }}>Fill all the Credintials</italic>
@@ -115,13 +127,13 @@ export const Edit = () => {
       <p style={{ fontWeight: 'bold', fontSize: '20px' }}>Welcome <span style={{ fontSize: '40px' }}> 👋</span></p>
       <h2 style={{ marginBottom: '35px' }}>Start building your new resume</h2>
     </div>
-    <Box sx={{ width: '64%', margin: 'auto', marginTop: '19px', marginBottom: '19px', display: 'flex', alignItems: 'left' }}>
+    <Box sx={{ width: '57%', margin: 'auto', marginTop: '19px', marginBottom: '19px', display: 'flex', alignItems: 'left' }}>
       <Stepperc step={step} />
     </Box>
     {
-      loading ? (<Box sx={{ display: 'flex', width: '100%', justifyContent: 'center',marginTop:'79px',flexDirection:'column' }}>
-        <CircularProgress size={65} sx={{margin:'29px auto'}} />
-        <italic style={{color:'black',fontFamily:'Roboto',fontSize:'15px',fontWeight:'500'}}>Hang on ! Generating your resume ...</italic>
+      loading ? (<Box sx={{ display: 'flex', width: '100%', justifyContent: 'center', marginTop: '79px', flexDirection: 'column' }}>
+        <CircularProgress size={65} sx={{ margin: '29px auto' }} />
+        <span style={{ color: 'black', fontFamily: 'Roboto', fontSize: '15px', fontWeight: '500' }}>Hang on ! Generating your resume ...</span>
       </Box>) : (<>
 
 
@@ -166,6 +178,10 @@ export const Edit = () => {
             </label>
           </div>
         </Box>
+        {/* 
+        <Box sx={{ width: '44%', margin: 'auto', marginTop: '29px', marginBottom: '19px', display: 'flex', alignItems: 'left' }}>
+          <input type="date" style={{ width: '100%',backgroundColor:'transparent',height:'49px',border:'none',outline:'none',fontSize:'16px',fontFamily:'Roboto',color:'#636363',borderBottom:'1px solid gray' }} onChange={(e)=>setAge(e.target.value.split('-')[0])} name="" id="" />
+        </Box> */}
 
         <Box sx={{ width: '44%', margin: 'auto', marginTop: '29px', marginBottom: '19px', display: 'flex', alignItems: 'left' }}>
           <h3>Contact Address :</h3>
@@ -191,9 +207,9 @@ export const Edit = () => {
           <FormControl sx={{ width: '55%', minWidth: '320px', margin: 'auto', marginTop: '9px', marginBottom: '9px' }} variant="standard">
             {/* <InputLabel htmlFor="component-simple">Street/House No.</InputLabel> */}
             <Alert severity="info" sx={{ borderRadius: '9px', margin: '9px 0', backgroundColor: 'transparent' }}>
-              <strong>Tip : Being discriptive and precise would be great </strong><span style={{ fontSize: '12px', color: 'gray', fontWeight: 'bold', marginLeft: '6px' }}>(0/140) </span>
+              <strong>Tip : Being discriptive and precise would be great </strong><span style={{ fontSize: '12px', color: 'gray', fontWeight: 'bold', marginLeft: '6px' }}>({textareacount}/140) </span>
             </Alert>
-            <textarea value={overview} id="txtarea" onChange={(e) => setOver(e.target.value)} onMouseOver={() => document.getElementById('txtarea').style.border = "2px solid #191919"} onMouseLeave={() => document.getElementById('txtarea').style.border = "2px solid #a4a4a4"} onFocus={() => document.getElementById('txtarea').style.border = "2px solid rgb(25,118,210)"} style={style} placeholder="About Yourself .." rows="10" />
+            <textarea value={overview} id="txtarea" onChange={(e) => onTextarea(e)} onMouseOver={() => document.getElementById('txtarea').style.border = "2px solid #191919"} onMouseLeave={() => document.getElementById('txtarea').style.border = "2px solid #a4a4a4"} onFocus={() => document.getElementById('txtarea').style.border = "2px solid rgb(25,118,210)"} style={style} placeholder="About Yourself .." rows="10" />
           </FormControl>
         </Box>
 
@@ -213,7 +229,12 @@ export const Edit = () => {
             <Input value={edu2} onChange={(e) => setEdu2(e.target.value)} id="component-simple" />
           </FormControl>
         </Box>
-
+        <Box sx={{ width: '44%', margin: 'auto', marginTop: '29px', marginBottom: '19px', display: 'flex', alignItems: 'left' }}>
+          <Button variant="outlined" size="small" style={{ display: 'flex', alignItems: 'center' }} sx={{  border: '1px solid gray',color:'#636363' }}>
+            {/* <AddIcon style={{ width: '16px', marginRight: '4px' }} /> */}
+            Add feild
+          </Button>
+        </Box>
 
         <Box sx={{ width: '44%', margin: 'auto', marginTop: '29px', marginBottom: '19px', display: 'flex', alignItems: 'left' }}>
           <h3>Experience :</h3>
@@ -230,7 +251,13 @@ export const Edit = () => {
             <Input value={exp2} onChange={(e) => setExp2(e.target.value)} id="component-simple" />
           </FormControl>
         </Box>
-
+        <Box sx={{ width: '44%', margin: 'auto', marginTop: '29px', marginBottom: '19px', display: 'flex', alignItems: 'left' }}>
+          <Button variant="outlined" size="small" style={{ display: 'flex', alignItems: 'center' }} sx={{  border: '1px solid gray',color:'#636363' }}>
+            {/* <AddIcon style={{ width: '16px', marginRight: '4px' }} /> */}
+            Add feild
+          </Button>
+        </Box>
+       
 
         <Box sx={{ width: '44%', margin: 'auto', marginTop: '29px', marginBottom: '19px', display: 'flex', alignItems: 'left' }}>
           <h3>Awards/Acknowledgements :</h3>
@@ -247,13 +274,17 @@ export const Edit = () => {
             <Input value={aw2} onChange={(e) => setAw2(e.target.value)} id="component-simple" />
           </FormControl>
         </Box>
+        <Box sx={{ width: '44%', margin: 'auto', marginTop: '29px', marginBottom: '19px', display: 'flex', alignItems: 'left' }}>
+          <Button variant="outlined" size="small" style={{ display: 'flex', alignItems: 'center' }} sx={{  border: '1px solid gray',color:'#636363' }}>
+            {/* <AddIcon style={{ width: '16px', marginRight: '4px' }} /> */}
+            Add feild
+          </Button>
+        </Box>
 
         {/* <Box sx={{ width: '80%', margin: 'auto', marginTop: '49px', marginBottom: '19px',display:'flex',flexDirection:'row',alignItems:'center' }}>
       <InputLabel htmlFor="chbx">English</InputLabel>
       <Checkbox id="chbx"/>
       </Box> */}
-
-
 
         <Box sx={{ width: '80%', margin: 'auto', marginTop: '49px', marginBottom: '19px' }}>
           <Button onClick={(e) => { e.preventDefault(); handleSubmit() }} variant="outlined">Preview </Button>
