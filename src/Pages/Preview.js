@@ -1,4 +1,4 @@
-import React, {  } from 'react'
+import React, { } from 'react'
 import '../css/Preview.css'
 import Button from '@mui/material/Button';
 import { Box } from '@mui/system';
@@ -25,10 +25,11 @@ export default function Preview() {
                     <h1>{sessionStorage.getItem('fname') + " " + sessionStorage.getItem('lname')}</h1>
                     <div className="smalltextdown">
                         <p>{sessionStorage.getItem('city') + " ," + sessionStorage.getItem('street')}</p>
-                        <p>, {sessionStorage.getItem('phone')}</p>
-                        <p>, {sessionStorage.getItem('email')}</p>
+                        <p>{sessionStorage.getItem('phone')}</p>
+                        <p>{sessionStorage.getItem('email')}</p>
                     </div>
                 </div>
+                <img src={sessionStorage.getItem('imageurl')} style={{ width: '130px', position: 'absolute', right: '145px', top: '65px', borderRadius: '50%' }} alt="" />
                 <h2 className="objhead">Objective :</h2>
                 <div className="obj">
                     {sessionStorage.getItem('overview')}
