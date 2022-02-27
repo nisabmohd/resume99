@@ -13,7 +13,7 @@ export default function Navbar() {
               
             </div>
             <div className="startbtn">
-                <Link to="/edit" style={{textDecoration:'none'}}><Button variant="outlined">Start</Button></Link>
+                <Link to="/select" style={{textDecoration:'none'}}><Button variant="outlined">Start</Button></Link>
                 
             </div>
             

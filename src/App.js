@@ -11,6 +11,7 @@ import {
 } from "react-router-dom";
 import { Edit } from './Pages/Edit';
 import Preview from './Pages/Preview';
+import Select from './Pages/Select';
 function App() {
   const [progress, setProgress] = useState(0)
   useEffect(()=>{
@@ -31,6 +32,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home set={setProgress} />} ></Route>
           <Route exact path="/edit" element={<Edit set={setProgress} />} ></Route>
+          <Route exact path="/select" element={<Select/>} />
           <Route exact path="/prev" element={<Preview  set={setProgress}/>} ></Route>
           <Route exact path="*" element={<Error set={setProgress} />} ></Route>
         </Routes>
