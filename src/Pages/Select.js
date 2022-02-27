@@ -5,7 +5,7 @@ import MediaCard from '../components/MediaCard'
 import { Stepperc } from '../components/Stepperc'
 import '../css/Select.css'
 import temp1 from '../images/Template1.jpg'
-import temp2 from '../images/Template2.png'
+import temp2 from '../images/Template2.jpg'
 import { useNavigate } from 'react-router-dom';
 
 // import temp3 from '../images/Template3.png'
