@@ -17,7 +17,10 @@ export default function Preview() {
     }
     return (
         <div className="rsbody" id="bodyContent">
-            <Box id="hidestepper" sx={{ width: '64%', margin: 'auto', marginTop: '19px', marginBottom: '19px', display: 'flex', alignItems: 'left' }}>
+             <div className="salutations">
+                {/* <h2 style={{ marginBottom: '15px',marginTop:'32px' }}>All Done ...</h2> */}
+            </div>
+            <Box id="hidestepper" sx={{ width: '57%', margin: 'auto', marginTop: '29px', marginBottom: '19px', display: 'flex', alignItems: 'left',minWidth:'375px' }}>
                 <Stepperc step="2" />
             </Box>
             <div className="resume" style={{ position: 'relative', backgroundColor: 'white', height: '1208px', width: '900px', margin: 'auto' }}>

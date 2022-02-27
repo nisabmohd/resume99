@@ -3,3 +3,28 @@
     flex-direction: column;
     justify-content: center;
 }
+.resumetemplates{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 29px;
+    flex-wrap: wrap;
+}
+.tempimg{
+    width: 510px;
+    height: 720px;
+}
+@media screen and (max-width:570px){
+    .tempimg{
+        width:340px;
+        height: 500px;
+    }
+}
+.card{
+    width: fit-content;
+border-radius: 11px;
+overflow: hidden;
+box-shadow:  6px 6px 28px #d3d3d3,
+             -9px -9px 28px #ffffff;
+
+}

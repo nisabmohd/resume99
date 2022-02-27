@@ -2,9 +2,7 @@ import React from 'react'
 import previmg from '../images/res.jpg'
 import '../css/Prevone.css'
 import Button from '@mui/material/Button';
-
 import { Link } from "react-router-dom";
-
 export default function Previewone() {
     return (
         <div className='Previewone'>

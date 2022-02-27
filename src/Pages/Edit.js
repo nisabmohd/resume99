@@ -105,7 +105,7 @@ export const Edit = () => {
       }
       setTimeout(() => {
         navigate("/prev")
-      }, 4200)
+      }, 2200)
     }
   }
   const style = {
@@ -123,13 +123,22 @@ export const Edit = () => {
       )
     }
 
-    <div className="salutations">
+    {/* <div className="salutations">
       <p style={{ fontWeight: 'bold', fontSize: '20px' }}>Welcome <span style={{ fontSize: '40px' }}> 👋</span></p>
-      <h2 style={{ marginBottom: '35px' }}>Start building your new resume</h2>
+      <h2 style={{ marginBottom: '35px' }}></h2>
     </div>
     <Box sx={{ width: '57%', margin: 'auto', marginTop: '19px', marginBottom: '19px', display: 'flex', alignItems: 'left' }}>
       <Stepperc step={step} />
-    </Box>
+    </Box> */}
+
+
+    <div className="salutations">
+                {/* <h2 style={{ marginBottom: '15px',marginTop:'32px' }}>Start building your new resume</h2> */}
+            </div>
+            <Box sx={{ width: '57%', margin: 'auto', marginTop: '29px', marginBottom: '19px', display: 'flex', alignItems: 'left',minWidth:'375px' }}>
+                <Stepperc step={step} />
+            </Box>
+
     {
       loading ? (<Box sx={{ display: 'flex', width: '100%', justifyContent: 'center', marginTop: '79px', flexDirection: 'column' }}>
         <CircularProgress size={65} sx={{ margin: '29px auto' }} />
