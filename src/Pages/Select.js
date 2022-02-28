@@ -1,4 +1,3 @@
-
 import { Box, Button, CircularProgress } from '@mui/material'
 import React, { useState } from 'react'
 import MediaCard from '../components/MediaCard'
