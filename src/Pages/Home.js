@@ -33,7 +33,7 @@ export const Home = (props) => {
                 <AutBtn name="Login via Github" img={github} col="rgb(143 138 138)" textcol="white" onc={githubLogin}></AutBtn>
             </div>
             <div className="image" style={{width:"100%",display:'flex',justifyContent:'center'}}>
-            <img style={{ width: '620px', margin:'auto',marginTop:'-52px'}} src={bg} alt="" />
+            <img style={{ width: '620px', margin:'auto',marginTop:'-86px'}} src={bg} alt="" />
             </div>
         </div>
     )

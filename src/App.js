@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import './App.css';
 import { Home } from './pages/Home'
 import { Dashboard } from './Dashboard'
 import { ThemeProvider, createTheme } from '@mui/material/styles';
@@ -33,16 +32,16 @@ function App() {
               {
                 (!user) ?
                   <Home setuser={setUser}></Home> :
-                  <div style={{}}>
-                    <LoggedNav userimg={user.photoURL}></LoggedNav>
-                    <div className="dasboard" style={{ display: 'flex', width: '90%', margin: 'auto' }}>
+                  <div>
+                    <LoggedNav setuser={setUser} userimg={user.photoURL}></LoggedNav>
+                    <div className="dasboard" style={{ display: 'flex', width: '98%',justifyContent:'center',alignItems:'center',marginLeft:'2.5vw'}}>
                       <Dashboard></Dashboard>
                     </div>
                   </div>
               }
             </>} />
 
-            <Route path="/edit/*" element={<Edit />} />
+            <Route path="/edit/:id" element={<Edit />} />
 
           </Routes>
         </ThemeProvider>
