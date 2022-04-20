@@ -4,14 +4,17 @@
 ##  Features
 - Save To PDF
 - User Friendly
+- Free, forever
+- No Advertising
+- No User Tracking
 - Straight Forward
+
 ## Overview
 
 <img src="images/1.png">
 <br>
 <img src="images/2.png">
 <br>
-<img src="images/3.png">
 
 ### Built With
 
@@ -26,7 +29,7 @@ To clone and run this application, you'll need [Git](https://git-scm.com) and [N
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/nisabmohd/resume-builder.git
+$ git clone https://github.com/nisabmohd/resume99.git
 
 # Install dependencies
 $ npm install
@@ -35,4 +38,4 @@ $ npm install
 $ npm start
 ```
 
-#### (More resume templates are on built)
+#### <--- on built --->
