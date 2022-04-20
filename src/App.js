@@ -41,7 +41,7 @@ function App() {
               }
             </>} />
 
-            <Route path="/edit/:id" element={<Edit />} />
+            <Route path="/edit/:id" element={<Edit setuser={setUser}  />} />
 
           </Routes>
         </ThemeProvider>

@@ -6,14 +6,14 @@ import { LoggedNav } from '../Components/LoggedNav'
 import { useParams } from 'react-router-dom'
 
 
-export const Edit = () => {
+export const Edit = (props) => {
     let params = useParams();
     useEffect(() => {
         console.log(params);
     }, [])
     return (
         <>
-            <LoggedNav userimg={JSON.parse(localStorage.getItem('user')).photoURL}></LoggedNav>
+            <LoggedNav setuser={props.setuser} userimg={JSON.parse(localStorage.getItem('user')).photoURL}></LoggedNav>
             <div style={{ display: 'flex', flexDirection: 'row', width: '91%', margin: 'auto' }}>
                 <div className="leftbar" style={{ flex: '0.9', height: '89vh', overflowY: 'scroll', border: '1px solid red' }}>
                     <Leftbar></Leftbar>
