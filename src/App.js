@@ -34,7 +34,7 @@ function App() {
                   <Home setuser={setUser}></Home> :
                   <div>
                     <LoggedNav setuser={setUser} userimg={user.photoURL}></LoggedNav>
-                    <div className="dasboard" style={{ display: 'flex', width: '98%',justifyContent:'center',alignItems:'center',marginLeft:'2.5vw'}}>
+                    <div className="dasboard" style={{ display: 'flex', width: '98%',justifyContent:'center',alignItems:'center',marginLeft:'2.5vw',paddingTop:'29px'}}>
                       <Dashboard></Dashboard>
                     </div>
                   </div>

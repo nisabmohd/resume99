@@ -14,14 +14,14 @@ export const Edit = (props) => {
     return (
         <>
             <LoggedNav setuser={props.setuser} userimg={JSON.parse(localStorage.getItem('user')).photoURL}></LoggedNav>
-            <div style={{ display: 'flex', flexDirection: 'row', width: '91%', margin: 'auto' }}>
-                <div className="leftbar" style={{ flex: '0.9', height: '89vh', overflowY: 'scroll', border: '1px solid red' }}>
+            <div style={{ display: 'flex', flexDirection: 'row', width: '91%', margin: 'auto',marginTop:'29px' }}>
+                <div className="leftbar" style={{ flex: '0.9', height: '85vh', overflowY: 'scroll', border: '1px solid red' }}>
                     <Leftbar></Leftbar>
                 </div>
-                <div className="previewbar" style={{ flex: '2', height: '89vh', overflowY: 'scroll', border: '1px solid red' }}>
+                <div className="previewbar" style={{ flex: '2', height: '85vh', overflowY: 'scroll', border: '1px solid red' }}>
                     <Preview></Preview>
                 </div>
-                <div className="rightbar" style={{ flex: 0.9, height: '89vh', overflowY: 'scroll', border: '1px solid red' }}>
+                <div className="rightbar" style={{ flex: 0.9, height: '85vh', overflowY: 'scroll', border: '1px solid red' }}>
                     <Right></Right>
                 </div>
             </div>
