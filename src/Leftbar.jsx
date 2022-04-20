@@ -2,6 +2,6 @@ import React from 'react'
 
 export const Leftbar = () => {
   return (
-    <div>Leftbar</div>
+    <div>lorem1400</div>
   )
 }

@@ -5,6 +5,7 @@ import { Dashboard } from './Dashboard'
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { LoggedNav } from './Components/LoggedNav';
 import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { Edit } from './pages/Edit';
 
 
 function App() {
@@ -16,6 +17,9 @@ function App() {
   useEffect(() => {
     if (localStorage.getItem('user')) {
       setUser(JSON.parse(localStorage.getItem('user')))
+    }
+    if (!localStorage.getItem('list')) {
+      localStorage.setItem('list',JSON.stringify([]))
     }
   }, [])
 
@@ -38,7 +42,7 @@ function App() {
               }
             </>} />
 
-            <Route path="/edit/*" element={<></> } />
+            <Route path="/edit/*" element={<Edit />} />
 
           </Routes>
         </ThemeProvider>
