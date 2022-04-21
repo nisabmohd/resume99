@@ -13,7 +13,7 @@
 
 <img src="images/1.png">
 <br>
-<img src="images/2.png">
+<img src="images/3.png">
 <br>
 
 ### Built With
