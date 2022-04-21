@@ -18,7 +18,7 @@ function App() {
       setUser(JSON.parse(localStorage.getItem('user')))
     }
     if (!localStorage.getItem('list')) {
-      localStorage.setItem('list',JSON.stringify([]))
+      localStorage.setItem('list', JSON.stringify([]))
     }
   }, [])
 
@@ -34,14 +34,14 @@ function App() {
                   <Home setuser={setUser}></Home> :
                   <div>
                     <LoggedNav setuser={setUser} userimg={user.photoURL}></LoggedNav>
-                    <div className="dasboard" style={{ display: 'flex', width: '98%',justifyContent:'center',alignItems:'center',marginLeft:'2.5vw',paddingTop:'29px'}}>
+                    <div className="dasboard" style={{ display: 'flex', width: '100%', justifyContent: 'center', alignItems: 'center', marginLeft: '0', paddingTop: '11px' }}>
                       <Dashboard></Dashboard>
                     </div>
                   </div>
               }
             </>} />
 
-            <Route path="/edit/:id" element={<Edit setuser={setUser}  />} />
+            <Route path="/edit/:id" element={<Edit setuser={setUser} />} />
 
           </Routes>
         </ThemeProvider>

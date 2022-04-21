@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Navbar = () => {
   return (
-    <div className='navbar' style={{display:'flex',flexDirection:'row',alignItems:'center',justifyContent:'space-between',padding:'0 2vw'}}>
+    <div className='navbar' style={{display:'flex',flexDirection:'row',alignItems:'center',justifyContent:'space-between',padding:'0 2vw',marginTop:'-18px'}}>
         <div className="logo">
             <p style={{fontWeight:'700',fontSize:'30px',color:'white'}}>resume<span style={{color:'rgb(103,118,237)'}}>99</span></p>
         </div>

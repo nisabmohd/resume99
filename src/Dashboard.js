@@ -58,7 +58,7 @@ export const Dashboard = () => {
     }
 
     return (
-        <div className='dashboard' style={{ height: '85vh', width: 'inherit', overflowY: 'scroll', display: 'flex', flexDirection: 'row', gap: '30px', flexWrap: 'wrap', alignContent: 'flex-start' }}>
+        <div className='dashboard' style={{ height: '89vh', width: 'inherit', overflowY: 'scroll', display: 'flex', flexDirection: 'row', gap: '30px', flexWrap: 'wrap', alignContent: 'flex-start',marginLeft:'29px' }}>
             <Toaster />
             <div className='card_create'>
                 <Button variant="outlined" onClick={handleClickOpen} style={{ height: '370px', padding: '0 41px', backgroundColor: '#303030', border: 'none', margin: 'auto',width: '260px', }}>
