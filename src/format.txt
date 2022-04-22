@@ -1,46 +1,39 @@
 {
     "basics": {
-        "name": "Joe Roger",
+        "name": "Jenny Roger",
         "email": "xyz12345abc@gmail.com",
         "phone": "+91000000000",
-        "photo": {
-            "url": "",
-            "filters": {
-                "size": 128,
-                "shape": "square",
-                "border": false,
-                "grayscale": false
-            },
-            "visible": true
-        },
+        "photo": "",
         "summary": "I've always been a great problem solver, an ambivert, and a technophile obsessed with the latest techs. I’m familiar with a variety of\nprogramming languages and various web frameworks, but I’m always adding new skills to my repertoire.",
-        "website": "https://nisabmohd.github.io/portfolio/",
+        "website": "https://jenny.github.io/portfolio/",
         "headline": "",
         "location": {
-            "city": "Hyderabad",
-            "region": "Telangana",
-            "address": "9-3-30/1C Harijan basti",
-            "country": "India",
-            "postalCode": "500009"
+            "city": "New York",
+            "region": "48 downtown",
+            "address": "9-65 Baker Street",
+            "country": "USA",
+            "postalCode": "958741"
         },
         "profiles": [
             {
-                "id": "39b2271a-8286-468e-a7f6-ac185a249246",
-                "url": "https://twitter.com/mohdnisab",
+                "url": "https://twitter.com/jenny",
                 "network": "Twitter",
-                "username": "NisabMohd"
+                "username": "JennySty"
             },
             {
-                "id": "fba7292a-8f7d-4c83-a556-9175e7ed767b",
                 "url": "https://www.instagram.com/thenisab/",
                 "network": "Instagram",
-                "username": "thenisab"
+                "username": "theJenny"
             },
             {
-                "id": "7799e188-d33b-4ecb-847c-5b832bea0911",
-                "url": "https://www.linkedin.com/in/mohd-nisab-alam-725148197/",
+                "url": "https://www.linkedin.com/in/jenny-725148197/",
                 "network": "LinkedIn",
-                "username": "Mohd Nisab Alam"
+                "username": "Jenny Rogers"
+            },
+             {
+                "url": "https://www.facebook.com/in/jenny-725148197/",
+                "network": "Facebook",
+                "username": "Jenny Rogers"
             }
         ]
     },
@@ -235,30 +228,6 @@
             "columns": 2,
             "visible": true
         },
-        "volunteer": {
-            "id": "volunteer",
-            "name": "Volunteer Experience",
-            "type": "basic",
-            "items": [],
-            "columns": 2,
-            "visible": true
-        },
-        "references": {
-            "id": "references",
-            "name": "References",
-            "type": "basic",
-            "items": [],
-            "columns": 2,
-            "visible": true
-        },
-        "publications": {
-            "id": "publications",
-            "name": "Publications",
-            "type": "basic",
-            "items": [],
-            "columns": 2,
-            "visible": true
-        },
         "certifications": {
             "id": "certifications",
             "name": "Certifications",
@@ -266,89 +235,6 @@
             "items": [],
             "columns": 2,
             "visible": true
-        },
-        "d431a0f2-e548-470a-bfc1-e2eab8c1c073": {
-            "name": "Hobbies",
-            "type": "custom",
-            "items": [
-                {
-                    "id": "01a9c381-5333-438e-a82b-5a6d0ff3ca56",
-                    "url": "",
-                    "date": {
-                        "end": "",
-                        "start": ""
-                    },
-                    "level": "",
-                    "title": "Developing web applications",
-                    "summary": "",
-                    "keywords": [],
-                    "levelNum": 0,
-                    "subtitle": ""
-                },
-                {
-                    "id": "7454b478-6fe5-49e1-8d6b-d58a6ab7353b",
-                    "url": "",
-                    "date": {
-                        "end": "",
-                        "start": ""
-                    },
-                    "level": "",
-                    "title": "Listening to songs",
-                    "summary": "",
-                    "keywords": [],
-                    "levelNum": 0,
-                    "subtitle": ""
-                }
-            ],
-            "columns": 2,
-            "visible": true
         }
-    },
-    "metadata": {
-        "css": {
-            "value": "/* Enter custom CSS here */\n\n* {\n    outline: 1px solid #000;\n}",
-            "visible": false
-        },
-        "date": {
-            "format": "MMMM DD, YYYY"
-        },
-        "theme": {
-            "text": "#000000",
-            "primary": "#222222",
-            "background": "#ffffff"
-        },
-        "layout": [
-            [
-                [
-                    "work",
-                    "education",
-                    "projects",
-                    "volunteer",
-                    "references",
-                    "d431a0f2-e548-470a-bfc1-e2eab8c1c073"
-                ],
-                [
-                    "skills",
-                    "interests",
-                    "languages",
-                    "awards",
-                    "certifications",
-                    "publications"
-                ]
-            ]
-        ],
-        "locale": "en",
-        "template": "onyx",
-        "typography": {
-            "size": {
-                "body": 14,
-                "heading": 28
-            },
-            "family": {
-                "body": "Open Sans",
-                "heading": "Open Sans"
-            }
-        }
-    },
-    "public": true
+    }
 }

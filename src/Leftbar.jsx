@@ -11,7 +11,8 @@ import TranslateIcon from '@mui/icons-material/Translate';
 import HowToRegIcon from '@mui/icons-material/HowToReg';
 import HardwareIcon from '@mui/icons-material/Hardware';
 
-export const Leftbar = () => {
+
+export const Leftbar = (props) => {
 
   const headerStyle =
   {
@@ -21,32 +22,33 @@ export const Leftbar = () => {
     alignItems: 'center',
     justifyContent: 'flex-start', marginLeft: '49px'
   }
+  
   return (
-    <div style={{ height: 'inherit', overflowX: 'scroll', paddingTop: '8px' }}>
-      <div className="basics" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+    <div style={{ height: 'inherit', overflowX: 'scroll', paddingTop: '8px', width: 'inherit',margin:'auto', position: 'absolute'}}>
+      <div className="basics" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: 'fit-content', padding: '0 0px', justifyContent: 'center', margin: 'auto' }}>
         <div className="header" style={headerStyle}>
-          <PersonIcon></PersonIcon>
+          <PersonIcon style={{marginLeft:'-9px'}}></PersonIcon>
           <h3 style={{ marginLeft: '8px' }}>Basics</h3>
         </div>
-        <div className="inputsbasic" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', borderBottom: '1px solid rgb(53 52 52)', paddingBottom: '19px' }}>
+        <div className="inputsbasic" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', borderBottom: '1px solid rgb(53 52 52)', paddingBottom: '19px',width:'100%'}}>
           <div className="userbox1" style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', padding: '9px 0' }}>
             <Avatar sx={{ width: '125px', height: '125px' }}></Avatar>
           </div>
-          <TextField size="normal" type="text" sx={{ width: '395px', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} id="outlined-basic" label="Full Name" variant="outlined" />
-          <TextField sx={{ width: '395px', marginTop: '12px', fontSize: '9px' }} id="outlined-basic" label="Email Address" variant="outlined" />
+          <TextField size="normal" type="text" sx={{ width: '100%', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} id="outlined-basic" label="Full Name" variant="outlined" />
+          <TextField sx={{ width: '100%', marginTop: '12px', fontSize: '9px' }} id="outlined-basic" label="Email Address" variant="outlined" />
           <div className="box2" style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', padding: '9px 0' }}>
-            <TextField sx={{ width: '199px', marginTop: '6px', fontSize: '9px' }} id="outlined-basic" label="Phone Number" variant="outlined" />
-            <TextField sx={{ width: '187px', marginTop: '6px', marginLeft: '9px', fontSize: '9px' }} id="outlined-basic" label="Website" variant="outlined" />
+            <TextField sx={{ width: '154px', marginTop: '6px', fontSize: '9px' }} id="outlined-basic" label="Phone Number" variant="outlined" />
+            <TextField sx={{ width: '167px', marginTop: '6px', marginLeft: '13px', fontSize: '9px' }} id="outlined-basic" label="Website" variant="outlined" />
           </div>
         </div>
       </div>
 
       <div className="basics" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
-        <div className="inputsbasic" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', borderBottom: '1px solid rgb(53 52 52)', paddingBottom: '19px' }}>
-          <TextField size="normal" type="text" sx={{ width: '395px', marginLeft: '0px', fontSize: '6px', marginTop: '22px' }} id="outlined-basic" label="Headline" variant="outlined" />
-          <div className="box2" style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', padding: '9px 0' }}>
+        <div className="inputsbasic" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', borderBottom: '1px solid rgb(53 52 52)', paddingBottom: '19px',width:'100%' }}>
+          <TextField size="normal" type="text" sx={{ width: '93%', marginLeft: '0px', fontSize: '6px', marginTop: '22px' }} id="outlined-basic" label="Headline" variant="outlined" />
+          <div className="box2" style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', padding: '9px 0',width:'100%' }}>
             <TextField
-              style={{ width: '395px', marginTop: '11px' }}
+              style={{ width: '93%', marginTop: '11px' }}
               id="outlined-multiline-static"
               label="Summary"
               multiline
@@ -62,15 +64,15 @@ export const Leftbar = () => {
           <MapIcon></MapIcon>
           <h3 style={{ marginLeft: '8px' }}>Location</h3>
         </div>
-        <div className="inputsbasic" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', borderBottom: '1px solid rgb(53 52 52)', paddingBottom: '19px' }}>
-          <TextField size="normal" type="text" sx={{ width: '395px', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} id="outlined-basic" label="Address" variant="outlined" />
+        <div className="inputsbasic" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', borderBottom: '1px solid rgb(53 52 52)', paddingBottom: '19px' ,width:'100%'}}>
+          <TextField size="normal" type="text" sx={{ width: '92%', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} id="outlined-basic" label="Address" variant="outlined" />
           <div className="box2" style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', padding: '9px 0' }}>
-            <TextField sx={{ width: '199px', marginTop: '6px', fontSize: '9px' }} id="outlined-basic" label="City" variant="outlined" />
-            <TextField sx={{ width: '187px', marginTop: '6px', marginLeft: '9px', fontSize: '9px' }} id="outlined-basic" label="Region" variant="outlined" />
+            <TextField sx={{ width: '140.5px', marginTop: '6px', fontSize: '9px' }} id="outlined-basic" label="City" variant="outlined" />
+            <TextField sx={{ width: '182px', marginTop: '6px', marginLeft: '9px', fontSize: '9px' }} id="outlined-basic" label="Region" variant="outlined" />
           </div>
           <div className="box2" style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', padding: '9px 0' }}>
-            <TextField sx={{ width: '199px', marginTop: '-4px', fontSize: '9px' }} id="outlined-basic" label="Country" variant="outlined" />
-            <TextField sx={{ width: '187px', marginTop: '-4px', marginLeft: '9px', fontSize: '9px' }} id="outlined-basic" label="Postal Code" variant="outlined" />
+            <TextField sx={{ width: '140.5px', marginTop: '-4px', fontSize: '9px' }} id="outlined-basic" label="Country" variant="outlined" />
+            <TextField sx={{ width: '182px', marginTop: '-4px', marginLeft: '9px', fontSize: '9px' }} id="outlined-basic" label="Postal Code" variant="outlined" />
           </div>
         </div>
       </div>
@@ -80,11 +82,11 @@ export const Leftbar = () => {
           <LinkedInIcon></LinkedInIcon>
           <h3 style={{ marginLeft: '8px' }}>Profiles</h3>
         </div>
-        <div className="inputsbasic" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', borderBottom: '1px solid rgb(53 52 52)', paddingBottom: '19px' }}>
-          <TextField size="normal" type="text" sx={{ width: '395px', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} id="outlined-basic" label="LinkedIn" variant="outlined" />
-          <TextField size="normal" type="text" sx={{ width: '395px', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} id="outlined-basic" label="Instagram" variant="outlined" />
-          <TextField size="normal" type="text" sx={{ width: '395px', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} id="outlined-basic" label="Twitter" variant="outlined" />
-          <TextField size="normal" type="text" sx={{ width: '395px', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} id="outlined-basic" label="Facebook" variant="outlined" />
+        <div className="inputsbasic" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', borderBottom: '1px solid rgb(53 52 52)', paddingBottom: '19px' ,width:'100%'}}>
+          <TextField size="normal" type="text" sx={{ width: '96%', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} id="outlined-basic" label="LinkedIn" variant="outlined" />
+          <TextField size="normal" type="text" sx={{ width: '96%', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} id="outlined-basic" label="Instagram" variant="outlined" />
+          <TextField size="normal" type="text" sx={{ width: '96%', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} id="outlined-basic" label="Twitter" variant="outlined" />
+          <TextField size="normal" type="text" sx={{ width: '96%', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} id="outlined-basic" label="Facebook" variant="outlined" />
 
         </div>
       </div>
@@ -94,16 +96,16 @@ export const Leftbar = () => {
           <SchoolIcon></SchoolIcon>
           <h3 style={{ marginLeft: '8px' }}>Education</h3>
         </div>
-        <div className="inputsbasic" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', borderBottom: '1px solid rgb(53 52 52)', paddingBottom: '19px' }}>
+        <div className="inputsbasic" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', borderBottom: '1px solid rgb(53 52 52)', paddingBottom: '19px',width:'100%' }}>
           <TextField
-            style={{ width: '395px', marginTop: '11px' }}
+            style={{ width: '96%', marginTop: '11px' }}
             id="outlined-multiline-static"
             label="Degree followed by start and end year"
             multiline
             rows={3}
           />
           <TextField
-            style={{ width: '395px', marginTop: '14px' }}
+            style={{ width: '96%', marginTop: '14px' }}
             id="outlined-multiline-static"
             label="School followed by start and end year"
             multiline
@@ -118,9 +120,9 @@ export const Leftbar = () => {
           <EmojiEventsIcon></EmojiEventsIcon>
           <h3 style={{ marginLeft: '8px' }}>Awards</h3>
         </div>
-        <div className="inputsbasic" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', borderBottom: '1px solid rgb(53 52 52)', paddingBottom: '19px' }}>
-          <TextField size="normal" type="text" sx={{ width: '395px', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} id="outlined-basic" label="Award Title" variant="outlined" />
-          <TextField size="normal" type="text" sx={{ width: '395px', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} id="outlined-basic" label="Award Title" variant="outlined" />
+        <div className="inputsbasic" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', borderBottom: '1px solid rgb(53 52 52)', paddingBottom: '19px',width:'100%' }}>
+          <TextField size="normal" type="text" sx={{ width: '96%', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} id="outlined-basic" label="Award Title" variant="outlined" />
+          <TextField size="normal" type="text" sx={{ width: '96%', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} id="outlined-basic" label="Award Title" variant="outlined" />
         </div>
       </div>
 
@@ -130,10 +132,10 @@ export const Leftbar = () => {
           <BadgeIcon />
           <h3 style={{ marginLeft: '8px' }}>Certificates</h3>
         </div>
-        <div className="inputsbasic" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', borderBottom: '1px solid rgb(53 52 52)', paddingBottom: '19px' }}>
-          <TextField size="normal" type="text" sx={{ width: '395px', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} id="outlined-basic" label="Certificate Title" variant="outlined" />
-          <TextField size="normal" type="text" sx={{ width: '395px', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} id="outlined-basic" label="Certificate Title" variant="outlined" />
-          <TextField size="normal" type="text" sx={{ width: '395px', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} id="outlined-basic" label="Certificate Title" variant="outlined" />
+        <div className="inputsbasic" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', borderBottom: '1px solid rgb(53 52 52)', paddingBottom: '19px' ,width:'100%'}}>
+          <TextField size="normal" type="text" sx={{ width: '96%', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} id="outlined-basic" label="Certificate Title" variant="outlined" />
+          <TextField size="normal" type="text" sx={{ width: '96%', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} id="outlined-basic" label="Certificate Title" variant="outlined" />
+          <TextField size="normal" type="text" sx={{ width: '96%', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} id="outlined-basic" label="Certificate Title" variant="outlined" />
         </div>
       </div>
 
@@ -143,23 +145,23 @@ export const Leftbar = () => {
           <HardwareIcon />
           <h3 style={{ marginLeft: '8px' }}>Projects</h3>
         </div>
-        <div className="inputsbasic" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', borderBottom: '1px solid rgb(53 52 52)', paddingBottom: '19px' }}>
+        <div className="inputsbasic" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', borderBottom: '1px solid rgb(53 52 52)', paddingBottom: '19px' ,width:'100%'}}>
           <TextField
-            style={{ width: '395px', marginTop: '11px' }}
+            style={{ width: '96%', marginTop: '11px' }}
             id="outlined-multiline-static"
             label="Project title and description"
             multiline
             rows={3}
           />
           <TextField
-            style={{ width: '395px', marginTop: '11px' }}
+            style={{ width: '96%', marginTop: '11px' }}
             id="outlined-multiline-static"
             label="Project title and description"
             multiline
             rows={3}
           />
           <TextField
-            style={{ width: '395px', marginTop: '11px' }}
+            style={{ width: '96%', marginTop: '11px' }}
             id="outlined-multiline-static"
             label="Project title and description"
             multiline
@@ -174,22 +176,22 @@ export const Leftbar = () => {
           < TranslateIcon />
           <h3 style={{ marginLeft: '8px' }}>Languages</h3>
         </div>
-        <div className="inputsbasic" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', borderBottom: '1px solid rgb(53 52 52)', paddingBottom: '19px' }}>
-          <TextField size="normal" type="text" sx={{ width: '395px', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} id="outlined-basic" label="Language Title" variant="outlined" />
-          <TextField size="normal" type="text" sx={{ width: '395px', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} id="outlined-basic" label="Language Title" variant="outlined" />
+        <div className="inputsbasic" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', borderBottom: '1px solid rgb(53 52 52)', paddingBottom: '19px',width:'100%' }}>
+          <TextField size="normal" type="text" sx={{ width: '96%', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} id="outlined-basic" label="Language Title" variant="outlined" />
+          <TextField size="normal" type="text" sx={{ width: '96%', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} id="outlined-basic" label="Language Title" variant="outlined" />
         </div>
       </div>
 
 
-      <div className="basics" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center',marginBottom:'19px' }}>
+      <div className="basics" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '19px' }}>
         <div className="header" style={headerStyle}>
           <HowToRegIcon />
           <h3 style={{ marginLeft: '8px' }}>Skills</h3>
         </div>
-        <div className="inputsbasic" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', borderBottom: '1px solid rgb(53 52 52)', paddingBottom: '19px' }}>
-          <TextField size="normal" type="text" sx={{ width: '395px', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} id="outlined-basic" label="Skill title followed by proficiency" variant="outlined" />
-          <TextField size="normal" type="text" sx={{ width: '395px', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} id="outlined-basic" label="Skill title followed by proficiency" variant="outlined" />
-          <TextField size="normal" type="text" sx={{ width: '395px', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} id="outlined-basic" label="Skill title followed by proficiency" variant="outlined" />
+        <div className="inputsbasic" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', borderBottom: '1px solid rgb(53 52 52)', paddingBottom: '19px' ,width:'100%'}}>
+          <TextField size="normal" type="text" sx={{ width: '96%', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} id="outlined-basic" label="Skill title followed by proficiency" variant="outlined" />
+          <TextField size="normal" type="text" sx={{ width: '96%', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} id="outlined-basic" label="Skill title followed by proficiency" variant="outlined" />
+          <TextField size="normal" type="text" sx={{ width: '96%', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} id="outlined-basic" label="Skill title followed by proficiency" variant="outlined" />
         </div>
       </div>
 

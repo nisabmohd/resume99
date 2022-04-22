@@ -1,0 +1,75 @@
+.leftbar{
+    overflow-y: scroll;
+    padding-top:9px;
+    padding:0 12px;
+    padding-left: 0;
+    height:100vh;
+    border-right:1px solid rgb(53 52 52);
+    width:356px;
+    z-index: 949;
+}
+.rightbar{
+    overflow-y: scrol;
+    padding-top:9px;
+    padding:0 12px;
+    width:356px;
+    z-index: 99;
+    margin-left: auto;
+}
+.previewbar{
+    flex:2;
+    overflow-y: scroll;
+    height: 100%;
+    width: 725px;
+    z-index: -99;
+}
+
+.resimg{
+    width: 540px;
+    border-radius: 4px;
+}
+
+.rightbtn{
+position: absolute;
+left:89px;
+top:15px;
+display: none !important;
+
+}
+.leftbtn{
+position: absolute;
+right:33px;
+top:17.5px;
+display: none !important;
+}
+
+@media screen and (max-width:1668px){
+    .leftbar{
+        height: 100vh;
+    }
+    .rightbar{
+        /* display:none */
+    }
+    .leftbtn{
+        /* display: block !important; */
+    }
+}
+@media screen and (max-width:1252px){
+    .resimg{
+        width:600px;
+    }
+}
+@media screen and (max-width:1213px){
+    .leftbtn{
+        /* display: block !important; */
+    }
+}
+
+@media screen and (max-width:1034px){
+    .leftbar{
+        display: none;
+    }
+    .rightbtn{
+        display: block !important;
+    }
+}

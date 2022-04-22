@@ -88,8 +88,8 @@ export const Dashboard = () => {
                         <Button onClick={handleClose}>Create</Button>
                     </DialogActions>
                 </Dialog>
-                <p style={{ marginTop: '5px' }}>Create New Resume</p>
-                <p style={{ fontSize: '13px', marginTop: '-6px' }}>Start from scratch</p>
+                <h4 style={{ marginTop: '5px' }}>Create New Resume</h4>
+                <h5 style={{ fontSize: '13px', marginTop: '-9px' }}>Start from scratch</h5>
             </div>
             {
                 getall?.map(item => {
@@ -98,8 +98,8 @@ export const Dashboard = () => {
                             <Button id={item.id} variant="outlined" onClick={(e)=>handleResumeclick(e.target.id)} style={{ height: '370px', width: '260px', padding: '0 41px', backgroundColor: '#303030', border: 'none', color: 'white', fontWeight: 'bold', margin: 'auto' }}>
                               <img src={edit} alt="" />
                             </Button>
-                            <p style={{ marginTop: '5px' }}>{item.resumename}</p>
-                            <p style={{ fontSize: '13px', marginTop: '-6px' }}>Edit this resume</p>
+                            <h4 style={{ marginTop: '5px' }}>{item.resumename}</h4>
+                            <h5 style={{ fontSize: '13px', marginTop: '-6px' }}>Edit this resume</h5>
                         </div>)
                 })
             }

@@ -7,6 +7,7 @@ import { Button } from '@mui/material';
 import CodeIcon from '@mui/icons-material/Code';
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
 
+
 export const Right = () => {
   const headerStyle =
   {
@@ -18,14 +19,15 @@ export const Right = () => {
   }
   return (
     <div style={{ borderRight: '2px solid rgb(37 37 37)', height: 'inherit', overflowX: 'scroll', paddingTop: '8px' }}>
+  
 
       <div className="header" style={headerStyle}>
         <CategoryIcon></CategoryIcon>
         <h3 style={{ marginLeft: '8px' }}>Templates</h3>
       </div>
       <div className="templates" style={{ borderBottom: '1px solid rgb(53 52 52)', paddingBottom: '22px' }}>
-        <img src={t1} style={{ width: '179px', margin: '0 12px', borderRadius: '6px' }} alt="" />
-        <img src={t1} style={{ width: '179px', margin: '0 12px', borderRadius: '6px' }} alt="" />
+        <img src={t1} style={{ width: '159px', margin: '0 12px', borderRadius: '6px' }} alt="" />
+        <img src={t1} style={{ width: '159px', margin: '0 12px', borderRadius: '6px' }} alt="" />
       </div>
 
       <div className="header" style={headerStyle}>
