@@ -44,6 +44,11 @@ export const Right = () => {
           <CodeIcon style={{ width: '22px', marginRight: '6px',marginTop:"-3px" }} />
           Save as JSON
         </Button>
+
+        <Button variant="outlined" size="medium" style={{ border: '1.72px solid rgb(53 52 52)', color: 'white', margin: '9px 12px', fontWeight: 'bold', padding: '10px 12px' }}>
+         
+          Save for further
+        </Button>
       </div>
 
 

@@ -3,10 +3,10 @@
         "name": "Jenny Roger",
         "email": "xyz12345abc@gmail.com",
         "phone": "+91000000000",
-        "photo": "",
+        "photourl": "",
         "summary": "I've always been a great problem solver, an ambivert, and a technophile obsessed with the latest techs. I’m familiar with a variety of\nprogramming languages and various web frameworks, but I’m always adding new skills to my repertoire.",
         "website": "https://jenny.github.io/portfolio/",
-        "headline": "",
+        "headline": "Web Developer",
         "location": {
             "city": "New York",
             "region": "48 downtown",
@@ -14,227 +14,57 @@
             "country": "USA",
             "postalCode": "958741"
         },
-        "profiles": [
-            {
-                "url": "https://twitter.com/jenny",
-                "network": "Twitter",
-                "username": "JennySty"
-            },
-            {
-                "url": "https://www.instagram.com/thenisab/",
-                "network": "Instagram",
-                "username": "theJenny"
-            },
-            {
-                "url": "https://www.linkedin.com/in/jenny-725148197/",
-                "network": "LinkedIn",
-                "username": "Jenny Rogers"
-            },
-             {
-                "url": "https://www.facebook.com/in/jenny-725148197/",
-                "network": "Facebook",
-                "username": "Jenny Rogers"
-            }
-        ]
+        "profiles": {
+            "twitter": "https://twitter.com/jenny",
+            "instagram": "https://www.instagram.com/thenisab/",
+            "linkedin": "https://www.linkedin.com/in/jenny-725148197/",
+            "facebook": "https://www.facebook.com/in/jenny-725148197/"
+        }
     },
     "sections": {
         "work": {
-            "id": "work",
-            "name": "Work Experience",
-            "type": "basic",
-            "items": [],
-            "columns": 2,
-            "visible": true
+            "items": []
         },
         "awards": {
-            "id": "awards",
-            "name": "Awards",
-            "type": "basic",
-            "items": [],
-            "columns": 2,
-            "visible": true
+            "items": {
+                "award1": "Best salesperson - 2016",
+                "award2": "Evolver award - 2019"
+            }
         },
         "skills": {
-            "id": "skills",
-            "name": "Skills",
-            "type": "basic",
-            "items": [
-                {
-                    "id": "d588e2b0-e662-4d53-995d-b24bd20ab24f",
-                    "name": "React",
-                    "level": "Effective",
-                    "keywords": [],
-                    "levelNum": 0
-                },
-                {
-                    "id": "4a70ef72-9613-4ff7-9e31-1825fddabd65",
-                    "name": "Java",
-                    "level": "Effective",
-                    "keywords": [],
-                    "levelNum": 0
-                },
-                {
-                    "id": "d4cbd472-3644-42f8-8346-20ba4a278e1c",
-                    "name": "NodeJS",
-                    "level": "Intermediate",
-                    "keywords": [],
-                    "levelNum": 0
-                },
-                {
-                    "id": "091b2ee4-ce94-4b5c-8469-0e073f268890",
-                    "name": "Data Structures",
-                    "level": "Effective",
-                    "keywords": [],
-                    "levelNum": 0
-                }
-            ],
-            "columns": 2,
-            "visible": true
+            "items": {
+                "skill1": "React - Effective",
+                "skill2": "Java - Advanced",
+                "skill3": "NodeJS - Intermediate",
+                "skill4": "Data Structures - Begginer"
+            }
         },
         "projects": {
-            "id": "projects",
-            "name": "Projects",
-            "type": "basic",
-            "items": [
-                {
-                    "id": "fee344dd-44c0-4e85-b8e6-8b9e9ef78cdf",
-                    "url": "https://github.com/nisabmohd/cpe-online-compiler",
-                    "date": {
-                        "end": "",
-                        "start": ""
-                    },
-                    "name": "CPE online compiler",
-                    "summary": "",
-                    "keywords": [],
-                    "description": "CPE is an open source online code compiler for C, C++, Python, Java."
-                },
-                {
-                    "id": "81e5ade6-5bd7-48e6-ba85-9d6ebc03a0bd",
-                    "url": "https://github.com/nisabmohd/chatzoid",
-                    "date": {
-                        "end": "",
-                        "start": ""
-                    },
-                    "name": "chatzoid",
-                    "summary": "",
-                    "keywords": [],
-                    "description": "A real-time chat application"
-                },
-                {
-                    "id": "9029621b-f45f-426a-94e6-0cb84be82df2",
-                    "url": "https://github.com/nisabmohd/resume99",
-                    "date": {
-                        "end": "",
-                        "start": ""
-                    },
-                    "name": "resume99",
-                    "summary": "",
-                    "keywords": [],
-                    "description": "A resume builder in which resumes can be made easily"
-                },
-                {
-                    "id": "06b76808-b98e-4604-9edb-77b5050e1ba3",
-                    "url": "https://github.com/nisabmohd/News",
-                    "date": {
-                        "end": "",
-                        "start": ""
-                    },
-                    "name": "News",
-                    "summary": "",
-                    "keywords": [],
-                    "description": "A real-time news web application made using ReactJS"
-                }
-            ],
-            "columns": 2,
-            "visible": true
+            "items": {
+                "project1": "CPE online compiler \n CPE is an open source online code compiler for C, C++, Python, Java.",
+                "project2": "chatzoid \n A real-time chat application",
+                "project3": "resume99 \n A resume builder in which resumes can be made easily"
+            }
         },
         "education": {
-            "id": "education",
-            "name": "Education",
-            "type": "basic",
-            "items": [
-                {
-                    "id": "1a544ddd-c425-4abb-a959-005b3587081a",
-                    "url": "",
-                    "area": " Computer Science",
-                    "date": {
-                        "end": "2023-06-15T07:59:22.000Z",
-                        "start": "2019-08-08T07:59:12.000Z"
-                    },
-                    "score": "8.56 CGPA",
-                    "degree": "BTech",
-                    "courses": [],
-                    "summary": "",
-                    "institution": "CMR Institute of Technology"
-                },
-                {
-                    "id": "8a78c7ea-446b-4f0a-9f10-95b65ccff4ab",
-                    "url": "",
-                    "area": "Mathematical Sciences",
-                    "date": {
-                        "end": "2019-03-09T08:01:15.000Z",
-                        "start": ""
-                    },
-                    "score": "944 / 1000",
-                    "degree": "Intermediate",
-                    "courses": [],
-                    "summary": "",
-                    "institution": "Sri Gayathri "
-                },
-                {
-                    "id": "ad72952f-aea1-48dd-a961-6a62ad5a629a",
-                    "url": "",
-                    "area": "",
-                    "date": {
-                        "end": "2017-04-14T08:02:28.819Z",
-                        "start": "2015-04-14T08:03:03.680Z"
-                    },
-                    "score": "9.2 GPA",
-                    "degree": "SSC",
-                    "courses": [],
-                    "summary": "",
-                    "institution": "Sai Model High School"
-                }
-            ],
-            "columns": 2,
-            "visible": true
-        },
-        "interests": {
-            "id": "interests",
-            "name": "Interests",
-            "type": "basic",
-            "items": [],
-            "columns": 2,
-            "visible": true
+            "items": {
+                "institution1": "CMR Institute of Technology (2019-2023)",
+                "institution2": "Sri Gayathri (2017-2019)",
+                "institution3": "Sai Model High School (2017)"
+            }
         },
         "languages": {
-            "id": "languages",
-            "name": "Languages",
-            "type": "basic",
-            "items": [
-                {
-                    "id": "e05750bb-177a-420e-aff3-1921e0594952",
-                    "name": "Hindi",
-                    "level": "Mother Tongue",
-                    "levelNum": 0
-                },
-                {
-                    "id": "62a67f12-a42b-4907-8514-44ecd4291fea",
-                    "name": "English",
-                    "level": "Fluent",
-                    "levelNum": 0
-                }
-            ],
-            "columns": 2,
-            "visible": true
+            "items": {
+                "lang1": "Hindi",
+                "lang2": "English"
+            }
         },
         "certifications": {
-            "id": "certifications",
-            "name": "Certifications",
-            "type": "basic",
-            "items": [],
-            "columns": 2,
-            "visible": true
+            "items": {
+                "certificate1": "HackerRank React Certification",
+                "certificate2": "HackerRank NodeJS Certification",
+                "certificate3": "Coding Certification"
+            }
         }
     }
 }
