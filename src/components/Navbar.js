@@ -92,7 +92,6 @@ export const Navbar = (props) => {
               type="email"
               fullWidth
               variant="standard"
-              required
               value={email}
               onChange={(e) => { setEmail(e.target.value) }}
               sx={{ marginBottom: '16px' }}
@@ -104,7 +103,6 @@ export const Navbar = (props) => {
               label="Password atleast 6 digits"
               type="password"
               fullWidth
-              required
               value={password}
               onChange={(e) => { setPassword(e.target.value) }}
               variant="standard"
