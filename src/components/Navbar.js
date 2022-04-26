@@ -58,12 +58,13 @@ export const Navbar = (props) => {
       </div>
       <Toaster />
       <div className="tags">
-        <Link to="/" style={{ fontFamily:'PT Sans',fontSize: '15px', fontWeight: '700', textDecoration: 'none', margin: '0 10px', color: 'white' }}>Home</Link>
-        <button style={{ fontFamily:'PT Sans',fontSize: '15px', fontWeight: '600', textDecoration: 'none', margin: '0 10px', color: 'white', backgroundColor: 'transparent', outline: 'none', border: 'none', cursor: 'pointer'}} onClick={handleClickOpen1}>About</button>
+        <Link to="/" style={{ fontFamily: 'PT Sans', fontSize: '15px', fontWeight: '700', textDecoration: 'none', margin: '0 10px', color: 'white' }}>Home</Link>
+        <button style={{ fontFamily: 'PT Sans', fontSize: '15px', fontWeight: '600', textDecoration: 'none', margin: '0 10px', color: 'white', backgroundColor: 'transparent', outline: 'none', border: 'none', cursor: 'pointer' }} onClick={handleClickOpen1}>About</button>
         <Dialog maxWidth="xl" open={open1} onClose={handleClose1}>
-          <DialogTitle>About</DialogTitle>
+          {/* <DialogTitle>About</DialogTitle> */}
           <DialogContent style={{ textAlign: 'left' }}>
-            <p><span style={{ fontWeight: 'bold' }}>resume99</span> is open source resume builder developed bt <span style={{ fontWeight: 'bold' }}><a style={{ color: 'white', textDecoration: 'none' }} href="https://github.com/nisabmohd" target="_blank" rel="noreferrer">Mohd Nisab</a></span></p>
+            <h2>About :</h2>
+            <p><span style={{ fontWeight: 'bold' }}>resume99</span> is open source resume builder developed by <span style={{ fontWeight: 'bold' }}><a style={{ color: 'white', textDecoration: 'none' }} href="https://github.com/nisabmohd" target="_blank" rel="noreferrer">Mohd Nisab</a></span></p>
             <h5>Features : </h5>
             <li style={{ fontSize: '13px' }}> Save To PDF , Save to JSON , User Friendly , Free forever , No Advertising , No User Tracking , Straight Forward</li>
             <h5>How to use ?</h5>
@@ -79,7 +80,7 @@ export const Navbar = (props) => {
             <img style={{ width: '900px', marginTop: '12px', marginBottom: '12px', borderRadius: '10px' }} src={editpage2} alt="" />
           </DialogContent>
         </Dialog>
-        <button style={{ fontFamily:'PT Sans',fontSize: '15px', fontWeight: '600', textDecoration: 'none', margin: '0 10px', color: 'white', backgroundColor: 'transparent', outline: 'none', border: 'none', cursor: 'pointer' }} onClick={handleClickOpen} >Sign up</button>
+        <button style={{ fontFamily: 'PT Sans', fontSize: '15px', fontWeight: '600', textDecoration: 'none', margin: '0 10px', color: 'white', backgroundColor: 'transparent', outline: 'none', border: 'none', cursor: 'pointer' }} onClick={handleClickOpen} >Sign up</button>
         <Dialog open={open} onClose={handleClose}>
           <DialogTitle>Signup</DialogTitle>
           <DialogContent>

@@ -35,16 +35,16 @@ export const Right = (props) => {
 
       </div>
       <div className="butoonsave" style={{ marginTop: '13px' ,display:'flex',flexDirection:'column'}}>
-        <Button variant="outlined" size="medium" style={{ border: '1.72px solid rgb(53 52 52)', color: 'white', margin: '9px 12px', fontWeight: 'bold', padding: '10px 12px' }}>
+        <Button variant="outlined" size="medium" style={{ fontFamily: 'PT Sans',border: '1.72px solid rgb(53 52 52)', color: 'white', margin: '9px 12px', fontWeight: 'bold', padding: '10px 12px' }}>
           <PictureAsPdfIcon style={{ width: '22px', marginRight: '6px' }} />
           Save as PDF
         </Button>
-        <Button variant="outlined" size="medium" style={{ border: '1.72px solid rgb(53 52 52)', color: 'white', margin: '9px 12px', fontWeight: 'bold', padding: '10px 12px' }}>
+        <Button variant="outlined" size="medium" style={{fontFamily: 'PT Sans', border: '1.72px solid rgb(53 52 52)', color: 'white', margin: '9px 12px', fontWeight: 'bold', padding: '10px 12px' }}>
           <CodeIcon style={{ width: '22px', marginRight: '6px',marginTop:"-3px" }} />
           Save as JSON
         </Button>
 
-        <Button variant="outlined" size="medium" style={{ border: '1.72px solid rgb(53 52 52)', color: 'white', margin: '9px 12px', fontWeight: 'bold', padding: '10px 12px' }} onClick={()=>props.uploaddata()}>
+        <Button variant="outlined" size="medium" style={{fontFamily: 'PT Sans', border: '1.72px solid rgb(53 52 52)', color: 'white', margin: '9px 12px', fontWeight: 'bold', padding: '10px 12px' }} onClick={()=>props.uploaddata()}>
           Save for further
         </Button>
       </div>
