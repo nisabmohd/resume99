@@ -13,6 +13,8 @@ import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogTitle from '@mui/material/DialogTitle';
+import toast, { Toaster } from 'react-hot-toast';
+
 
 
 export const Home = (props) => {
@@ -24,15 +26,21 @@ export const Home = (props) => {
     }
 
     async function emaillogin(email, password) {
-        const user = await signInWithEmailAndPassword(auth, email, password)
-        props.setuser(user)
-        localStorage.setItem('user', JSON.stringify(user.user))
+        signInWithEmailAndPassword(auth, email, password).then((user) => {
+            props.setuser(user)
+            localStorage.setItem('user', JSON.stringify(user.user))
+        }).catch(err => {
+            toast.error(err.message.slice(16));
+        })
     }
 
     async function signup(email, password) {
-        const user = await createUserWithEmailAndPassword(auth, email, password)
-        props.setuser(user)
-        localStorage.setItem('user', JSON.stringify(user.user))
+        createUserWithEmailAndPassword(auth, email, password).then(user => {
+            props.setuser(user)
+            localStorage.setItem('user', JSON.stringify(user.user))
+        }).catch(err => {
+            toast.error(err.message.slice(16));
+        })
 
     }
     const [email, setEmail] = useState('')
@@ -41,15 +49,21 @@ export const Home = (props) => {
     const handleClickOpen1 = () => {
         setOpen1(true);
     };
-
-    const handleClose1 = () => {
-        if (!email && !password) return;
+    const handlelogin = () => {
+        if (!email && !password) {
+            toast.error('Please enter all the credentials');
+            return;
+        }
         emaillogin(email, password)
+        setOpen1(false);
+    }
+    const handleClose1 = () => {
         setOpen1(false);
     };
     return (
         <div>
             <Navbar signup={signup}></Navbar>
+            <Toaster />
             <HomeSection></HomeSection>
             <div className="btns" style={{ width: 'fit-content', display: 'flex', flexDirection: 'row', margin: 'auto', marginTop: '45px' }}>
                 <AutBtn name="Login via Google" img={google} col="white" textcol="black" onc={googleLogin}></AutBtn>
@@ -84,7 +98,7 @@ export const Home = (props) => {
                         />
                     </DialogContent>
                     <DialogActions>
-                        <Button onClick={handleClose1}>Signin</Button>
+                        <Button onClick={handlelogin}>Signin</Button>
                     </DialogActions>
                 </Dialog>
             </div>
