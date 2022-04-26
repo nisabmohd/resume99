@@ -1,27 +1,22 @@
-<h1 align="center">Resume Builder</h1>
+# Resume99
+##### resume99 is open source resume builder which is completely free annd easy to use.
 
+####  Features
+###### Save To PDF , Save to JSON , User Friendly , Free forever , No Advertising , No User Tracking , Straight Forward</li>
 
-##  Features
-- Save To PDF
-- User Friendly
-- Free, forever
-- No Advertising
-- No User Tracking
-- Straight Forward
-
-## Overview
+#### Overview
 
 <img src="images/1.png">
 <br>
 <img src="images/3.png">
 <br>
 
-### Built With
+#### Built With
 
-- [React](https://reactjs.org/)
+###### [React](https://reactjs.org/)
 <!-- - [Firebase](https://firebase.google.com/) -->
 
-## How To Use
+#### How To Use
 
 <!-- Example: -->
 
@@ -37,5 +32,4 @@ $ npm install
 # Run the app
 $ npm start
 ```
-
-#### <--- on built --->
+###### This website is still under development, yet some functionalities are on built
