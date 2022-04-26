@@ -34,7 +34,7 @@ export const Leftbar = (props) => {
           <div className="userbox1" style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', padding: '9px 0' }}>
             <Avatar sx={{ width: '125px', height: '125px' }}></Avatar>
           </div>
-          <TextField size="normal" type="text" sx={{ width: '100%', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} id="outlined-basic" value={props.fullname} label="Full Name" variant="outlined" />
+          <TextField size="normal" type="text" sx={{ width: '100%', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} id="outlined-basic" value={props.fullname} onChange={(e)=>{props.setfullname(e.target.value)}} label="Full Name" variant="outlined" />
           <TextField value={props.email} sx={{ width: '100%', marginTop: '12px', fontSize: '9px' }} id="outlined-basic" label="Email Address" variant="outlined" />
           <div className="box2" style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', padding: '9px 0' }}>
             <TextField value={props.phone} sx={{ width: '154px', marginTop: '6px', fontSize: '9px' }} id="outlined-basic" label="Phone Number" variant="outlined" />

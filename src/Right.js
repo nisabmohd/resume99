@@ -7,8 +7,7 @@ import { Button } from '@mui/material';
 import CodeIcon from '@mui/icons-material/Code';
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
 
-
-export const Right = () => {
+export const Right = (props) => {
   const headerStyle =
   {
     display: 'flex',
@@ -45,8 +44,7 @@ export const Right = () => {
           Save as JSON
         </Button>
 
-        <Button variant="outlined" size="medium" style={{ border: '1.72px solid rgb(53 52 52)', color: 'white', margin: '9px 12px', fontWeight: 'bold', padding: '10px 12px' }}>
-         
+        <Button variant="outlined" size="medium" style={{ border: '1.72px solid rgb(53 52 52)', color: 'white', margin: '9px 12px', fontWeight: 'bold', padding: '10px 12px' }} onClick={()=>props.uploaddata()}>
           Save for further
         </Button>
       </div>
