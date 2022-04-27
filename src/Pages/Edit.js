@@ -5,7 +5,7 @@ import { Leftbar } from '../Leftbar'
 import { useParams } from 'react-router-dom'
 import { doc, getDoc } from "firebase/firestore";
 import { db } from '../config';
-import { LeftNav } from '../Components/LeftNav'
+import { LeftNav } from '../Component/LeftNav'
 import '../Resp.css'
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
