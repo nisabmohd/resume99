@@ -1,0 +1,1 @@
+// server side for printing dedicated resumes
