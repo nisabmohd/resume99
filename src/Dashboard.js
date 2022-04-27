@@ -96,7 +96,7 @@ export const Dashboard = () => {
                     return (
                         <div key={item.resumename} className='card_create'>
                             <Button id={item.id} variant="outlined" onClick={(e)=>handleResumeclick(e.target.id)} style={{ height: '370px', width: '260px', padding: '0 41px', backgroundColor: '#303030', border: 'none', color: 'white', fontWeight: 'bold', margin: 'auto' }}>
-                              <img src={edit} alt="" />
+                              <img style={{pointerEvents:'none'}} src={edit} alt="" />
                             </Button>
                             <h4 style={{ marginTop: '5px' }}>{item.resumename}</h4>
                             <h5 style={{ fontSize: '13px', marginTop: '-6px' }}>Edit this resume</h5>

@@ -10,10 +10,12 @@ import '../Resp.css'
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import { setDoc } from "firebase/firestore";
-
+import { deleteDoc } from "firebase/firestore";
+import { useNavigate } from 'react-router-dom';
 
 
 export const Edit = (props) => {
+    const navigate = useNavigate();
     let params = useParams();
     const [dbresume, setdbresume] = useState(null)
     // const [resumecontent, setResumecontent] = useState({})
@@ -36,7 +38,21 @@ export const Edit = (props) => {
     const [education1, setEducation1] = useState('')
     const [education2, setEducation2] = useState('')
     const [education3, setEducation3] = useState('')
-
+    const [award1, setAward1] = useState('')
+    const [award2, setAward2] = useState('')
+    const [cert1, setCert1] = useState('')
+    const [cert2, setCert2] = useState('')
+    const [cert3, setCert3] = useState('')
+    const [project1, setProject1] = useState('')
+    const [project2, setProject2] = useState('')
+    const [project3, setProject3] = useState('')
+    const [lang1, setLang1] = useState('')
+    const [lang2, setLang2] = useState('')
+    const [skill1, setSkill1] = useState('')
+    const [skill2, setSkill2] = useState('')
+    const [skill3, setSkill3] = useState('')
+    const [skill4, setSkill4] = useState('')
+    const [photo, setPhoto] = useState(null)
     // const [showRight,setShowRight]=useState(true)
     // const [showLeft,setShowLeft]=useState(true)
     useEffect(() => {
@@ -47,7 +63,7 @@ export const Edit = (props) => {
             if (docSnap.exists()) {
 
                 const obj = JSON.parse(docSnap.data().resumedata);
-                console.log(obj);
+                // console.log(obj);
                 setdbresume(docSnap.data());
                 // setResumecontent(docSnap.data().resumedata)
                 setFullName(obj.basics.name)
@@ -68,12 +84,35 @@ export const Edit = (props) => {
                 setEducation1(obj.sections.education.items.institution1)
                 setEducation2(obj.sections.education.items.institution2)
                 setEducation3(obj.sections.education.items.institution3)
+                setAward1(obj.sections.awards.items.award1)
+                setAward2(obj.sections.awards.items.award2)
+                setCert1(obj.sections.certifications.items.certificate1)
+                setCert2(obj.sections.certifications.items.certificate2)
+                setCert3(obj.sections.certifications.items.certificate3)
+                setProject1(obj.sections.projects.items.project1)
+                setProject2(obj.sections.projects.items.project2)
+                setProject3(obj.sections.projects.items.project3)
+                setLang1(obj.sections.languages.items.lang1)
+                setLang2(obj.sections.languages.items.lang2)
+                setSkill1(obj.sections.skills.items.skill1)
+                setSkill2(obj.sections.skills.items.skill2)
+                setSkill3(obj.sections.skills.items.skill3)
+                setSkill4(obj.sections.skills.items.skill4)
+                setPhoto(obj.basics.photourl)
+
+
             } else {
                 console.log("No such document!");
             }
         }
         fetchdata();
     }, [])
+    const deleteresume = async () => {
+        const c = window.confirm('All data will be deleted ?')
+        if (!c) return
+        await deleteDoc(doc(db, "resumes", params.id));
+        navigate("/")
+    }
 
     const uploaddata = async () => {
         await setDoc(doc(db, "resumes", params.id),
@@ -83,7 +122,7 @@ export const Edit = (props) => {
                         "name": fullname,
                         "email": email,
                         "phone": phone,
-                        "photourl": "",
+                        "photourl": photo,
                         "summary": summary,
                         "website": website,
                         "headline": headline,
@@ -107,49 +146,49 @@ export const Edit = (props) => {
                         },
                         "awards": {
                             "items": {
-                                "award1": "Best salesperson - 2016",
-                                "award2": "Evolver award - 2019"
+                                "award1": award1,
+                                "award2": award2
                             }
                         },
                         "skills": {
                             "items": {
-                                "skill1": "React - Effective",
-                                "skill2": "Java - Advanced",
-                                "skill3": "NodeJS - Intermediate",
-                                "skill4": "Data Structures - Begginer"
+                                "skill1": skill1,
+                                "skill2": skill2,
+                                "skill3": skill3,
+                                "skill4": skill4
                             }
                         },
                         "projects": {
                             "items": {
-                                "project1": "CPE online compiler \n CPE is an open source online code compiler for C, C++, Python, Java.",
-                                "project2": "chatzoid \n A real-time chat application",
-                                "project3": "resume99 \n A resume builder in which resumes can be made easily"
+                                "project1": project1,
+                                "project2": project2,
+                                "project3": project3
                             }
                         },
                         "education": {
                             "items": {
-                                "institution1": "CMR Institute of Technology (2019-2023)",
-                                "institution2": "Sri Gayathri (2017-2019)",
-                                "institution3": "Sai Model High School (2017)"
+                                "institution1": education1,
+                                "institution2": education2,
+                                "institution3": education3
                             }
                         },
                         "languages": {
                             "items": {
-                                "lang1": "Hindi",
-                                "lang2": "English"
+                                "lang1": lang1,
+                                "lang2": lang2
                             }
                         },
                         "certifications": {
                             "items": {
-                                "certificate1": "HackerRank React Certification",
-                                "certificate2": "HackerRank NodeJS Certification",
-                                "certificate3": "Coding Certification"
+                                "certificate1": cert1,
+                                "certificate2": cert2,
+                                "certificate3": cert3
                             }
                         }
                     }
                 }),
                 resumename: dbresume.resumename,
-                userid: params.id
+                userid: JSON.parse(localStorage.getItem('user')).uid
             }
         );
     }
@@ -162,8 +201,42 @@ export const Edit = (props) => {
             <div style={{ display: 'flex', flexDirection: 'row', width: '100%', marginTop: '-3px' }}>
                 <div className="leftbar">
                     <Leftbar fullname={fullname} email={email} phone={phone} website={website} headline={headline} summary={summary} address={address} region={region} city={city} postal={postal} country={country} facebook={facebook} instagram={instagram} twitter={twitter} linkedin={linkedin} education1={education1} education2={education2} education3={education3}
+                        award1={award1} award2={award2} cert1={cert1} cert2={cert2} cert3={cert3} project1={project1} project2={project2} project3={project3}
+                        lang1={lang1} lang2={lang2} skill1={skill1} skill2={skill2} skill3={skill3} skill4={skill4} photo={photo}
 
                         setfullname={setFullName}
+                        setEmail={setEmail}
+                        setphone={setPhone}
+                        setWebsite={setWebsite}
+                        setHeadline={setHeadline}
+                        setSummary={setSummary}
+                        setAddress={setAddress}
+                        setRegion={setRegion}
+                        setCity={setCity}
+                        setPostal={setPostal}
+                        setCountry={setCountry}
+                        setFacebook={setFacebook}
+                        setLinkedin={setLinkedin}
+                        setTwitter={setTwitter}
+                        setInstagram={setInstagram}
+                        setEducation1={setEducation1}
+                        setEducation2={setEducation2}
+                        setEducation3={setEducation3}
+                        setAward1={setAward1}
+                        setAward2={setAward2}
+                        setCert1={setCert1}
+                        setCert2={setCert2}
+                        setCert3={setCert3}
+                        setProject1={setProject1}
+                        setProject2={setProject2}
+                        setProject3={setProject3}
+                        setLang1={setLang1}
+                        setLang2={setLang2}
+                        setSkill1={setSkill1}
+                        setSkill2={setSkill2}
+                        setSkill3={setSkill3}
+                        setSkill4={setSkill4}
+                        setPhoto={setPhoto}
 
 
                     ></Leftbar>
@@ -172,7 +245,7 @@ export const Edit = (props) => {
                     <Preview rid={params.id}></Preview>
                 </div>
                 <div className="rightbar">
-                    <Right uploaddata={uploaddata} ></Right>
+                    <Right delete={deleteresume} uploaddata={uploaddata} ></Right>
                 </div>
             </div>
         </div>
