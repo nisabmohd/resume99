@@ -79,20 +79,21 @@ export const Leftbar = (props) => {
             <Avatar src={props.photo} sx={{ width: '125px', height: '125px',cursor:'pointer' }}></Avatar>
             </label>
           </div>
-          <TextField size="normal" type="text" sx={{ width: '100%', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} id="outlined-basic" value={props.fullname} onChange={(e) => { props.setfullname(e.target.value) }} label="Full Name" variant="outlined" />
-          <TextField value={props.email} sx={{ width: '100%', marginTop: '12px', fontSize: '9px' }} id="outlined-basic" label="Email Address" variant="outlined" onChange={(e) => { props.setEmail(e.target.value) }} />
+          <TextField InputProps={{ style: {fontSize: 13} }}InputLabelProps={{style: { fontSize: 13 } }}size="normal" type="text" sx={{ width: '100%', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} id="outlined-basic" value={props.fullname} onChange={(e) => { props.setfullname(e.target.value) }} label="Full Name" variant="outlined" />
+          <TextField InputProps={{ style: {fontSize: 13} }}InputLabelProps={{style: { fontSize: 13 } }}value={props.email} sx={{ width: '100%', marginTop: '12px', fontSize: '9px' }} id="outlined-basic" label="Email Address" variant="outlined" onChange={(e) => { props.setEmail(e.target.value) }} />
           <div className="box2" style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', padding: '9px 0' }}>
-            <TextField value={props.phone} onChange={(e) => { props.setphone(e.target.value) }} sx={{ width: '154px', marginTop: '6px', fontSize: '9px' }} id="outlined-basic" label="Phone Number" variant="outlined" />
-            <TextField onChange={(e) => { props.setWebsite(e.target.value) }} sx={{ width: '167px', marginTop: '6px', marginLeft: '13px', fontSize: '9px' }} id="outlined-basic" label="Website" value={props.website} variant="outlined" />
+            <TextField InputProps={{ style: {fontSize: 13} }}InputLabelProps={{style: { fontSize: 13 } }}value={props.phone} onChange={(e) => { props.setphone(e.target.value) }} sx={{ width: '154px', marginTop: '6px', fontSize: '9px' }} id="outlined-basic" label="Phone Number" variant="outlined" />
+            <TextField InputProps={{ style: {fontSize: 13} }}InputLabelProps={{style: { fontSize: 13 } }}onChange={(e) => { props.setWebsite(e.target.value) }} sx={{ width: '167px', marginTop: '6px', marginLeft: '13px', fontSize: '9px' }} id="outlined-basic" label="Website" value={props.website} variant="outlined" />
           </div>
         </div>
       </div>
 
       <div className="basics" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
         <div className="inputsbasic" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', borderBottom: '1px solid rgb(53 52 52)', paddingBottom: '19px', width: '100%' }}>
-          <TextField size="normal" type="text" sx={{ width: '93%', marginLeft: '0px', fontSize: '6px', marginTop: '22px' }} id="outlined-basic" label="Headline" value={props.headline} variant="outlined" onChange={(e) => { props.setHeadline(e.target.value) }} />
+          <TextField InputProps={{ style: {fontSize: 13} }}InputLabelProps={{style: { fontSize: 13 } }}size="normal" type="text" sx={{ width: '93%', marginLeft: '0px', fontSize: '6px', marginTop: '22px' }} id="outlined-basic" label="Headline" value={props.headline} variant="outlined" onChange={(e) => { props.setHeadline(e.target.value) }} />
           <div className="box2" style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', padding: '9px 0', width: '100%' }}>
             <TextField
+            InputProps={{ style: {fontSize: 13} }}InputLabelProps={{style: { fontSize: 13 } }}
               style={{ width: '93%', marginTop: '11px' }}
               id="outlined-multiline-static"
               label="Summary"
@@ -112,14 +113,14 @@ export const Leftbar = (props) => {
           <h3 style={{ marginLeft: '8px' }}>Location</h3>
         </div>
         <div className="inputsbasic" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', borderBottom: '1px solid rgb(53 52 52)', paddingBottom: '19px', width: '100%' }}>
-          <TextField size="normal" type="text" sx={{ width: '92%', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} id="outlined-basic" label="Address" value={props.address} variant="outlined" onChange={(e) => { props.setAddress(e.target.value) }} />
+          <TextField InputProps={{ style: {fontSize: 13} }}InputLabelProps={{style: { fontSize: 13 } }}size="normal" type="text" sx={{ width: '92%', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} id="outlined-basic" label="Address" value={props.address} variant="outlined" onChange={(e) => { props.setAddress(e.target.value) }} />
           <div className="box2" style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', padding: '9px 0' }}>
-            <TextField sx={{ width: '140.5px', marginTop: '6px', fontSize: '9px' }} id="outlined-basic" label="City" value={props.city} onChange={(e) => { props.setCity(e.target.value) }} variant="outlined" />
-            <TextField sx={{ width: '182px', marginTop: '6px', marginLeft: '9px', fontSize: '9px' }} id="outlined-basic" label="Region" value={props.region} onChange={(e) => { props.setRegion(e.target.value) }} variant="outlined" />
+            <TextField InputProps={{ style: {fontSize: 13} }}InputLabelProps={{style: { fontSize: 13 } }}sx={{ width: '140.5px', marginTop: '6px', fontSize: '9px' }} id="outlined-basic" label="City" value={props.city} onChange={(e) => { props.setCity(e.target.value) }} variant="outlined" />
+            <TextField InputProps={{ style: {fontSize: 13} }}InputLabelProps={{style: { fontSize: 13 } }}sx={{ width: '182px', marginTop: '6px', marginLeft: '9px', fontSize: '9px' }} id="outlined-basic" label="Region" value={props.region} onChange={(e) => { props.setRegion(e.target.value) }} variant="outlined" />
           </div>
           <div className="box2" style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', padding: '9px 0' }}>
-            <TextField sx={{ width: '140.5px', marginTop: '-4px', fontSize: '9px' }} id="outlined-basic" value={props.country} onChange={(e) => { props.setCountry(e.target.value) }} label="Country" variant="outlined" />
-            <TextField sx={{ width: '182px', marginTop: '-4px', marginLeft: '9px', fontSize: '9px' }} id="outlined-basic" label="Postal Code" value={props.postal} onChange={(e) => { props.setPostal(e.target.value) }} variant="outlined" />
+            <TextField InputProps={{ style: {fontSize: 13} }}InputLabelProps={{style: { fontSize: 13 } }}sx={{ width: '140.5px', marginTop: '-4px', fontSize: '9px' }} id="outlined-basic" value={props.country} onChange={(e) => { props.setCountry(e.target.value) }} label="Country" variant="outlined" />
+            <TextField InputProps={{ style: {fontSize: 13} }}InputLabelProps={{style: { fontSize: 13 } }}sx={{ width: '182px', marginTop: '-4px', marginLeft: '9px', fontSize: '9px' }} id="outlined-basic" label="Postal Code" value={props.postal} onChange={(e) => { props.setPostal(e.target.value) }} variant="outlined" />
           </div>
         </div>
       </div>
@@ -130,10 +131,10 @@ export const Leftbar = (props) => {
           <h3 style={{ marginLeft: '8px' }}>Profiles</h3>
         </div>
         <div className="inputsbasic" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', borderBottom: '1px solid rgb(53 52 52)', paddingBottom: '19px', width: '100%' }}>
-          <TextField size="normal" type="text" sx={{ width: '96%', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} id="outlined-basic" label="LinkedIn" value={props.linkedin} onChange={(e) => { props.setLinkedin(e.target.value) }} variant="outlined" />
-          <TextField size="normal" type="text" sx={{ width: '96%', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} id="outlined-basic" label="Instagram" onChange={(e) => { props.setInstagram(e.target.value) }} value={props.instagram} variant="outlined" />
-          <TextField size="normal" type="text" sx={{ width: '96%', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} onChange={(e) => { props.setTwitter(e.target.value) }} id="outlined-basic" label="Twitter" value={props.twitter} variant="outlined" />
-          <TextField size="normal" type="text" sx={{ width: '96%', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} id="outlined-basic" label="Facebook" value={props.facebook} variant="outlined" onChange={(e) => { props.setFacebook(e.target.value) }} />
+          <TextField InputProps={{ style: {fontSize: 13} }}InputLabelProps={{style: { fontSize: 13 } }}size="normal" type="text" sx={{ width: '96%', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} id="outlined-basic" label="LinkedIn" value={props.linkedin} onChange={(e) => { props.setLinkedin(e.target.value) }} variant="outlined" />
+          <TextField InputProps={{ style: {fontSize: 13} }}InputLabelProps={{style: { fontSize: 13 } }}size="normal" type="text" sx={{ width: '96%', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} id="outlined-basic" label="Instagram" onChange={(e) => { props.setInstagram(e.target.value) }} value={props.instagram} variant="outlined" />
+          <TextField InputProps={{ style: {fontSize: 13} }}InputLabelProps={{style: { fontSize: 13 } }}size="normal" type="text" sx={{ width: '96%', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} onChange={(e) => { props.setTwitter(e.target.value) }} id="outlined-basic" label="Twitter" value={props.twitter} variant="outlined" />
+          <TextField InputProps={{ style: {fontSize: 13} }}InputLabelProps={{style: { fontSize: 13 } }}size="normal" type="text" sx={{ width: '96%', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} id="outlined-basic" label="Facebook" value={props.facebook} variant="outlined" onChange={(e) => { props.setFacebook(e.target.value) }} />
 
         </div>
       </div>
@@ -145,6 +146,7 @@ export const Leftbar = (props) => {
         </div>
         <div className="inputsbasic" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', borderBottom: '1px solid rgb(53 52 52)', paddingBottom: '19px', width: '100%' }}>
           <TextField
+          InputProps={{ style: {fontSize: 13} }}InputLabelProps={{style: { fontSize: 13 } }}
             style={{ width: '96%', marginTop: '11px' }}
             id="outlined-multiline-static"
             label="Degree followed by start and end year"
@@ -154,6 +156,7 @@ export const Leftbar = (props) => {
             onChange={(e) => { props.setEducation1(e.target.value) }}
           />
           <TextField
+          InputProps={{ style: {fontSize: 13} }}InputLabelProps={{style: { fontSize: 13 } }}
             style={{ width: '96%', marginTop: '14px' }}
             id="outlined-multiline-static"
             label="Intermediate followed by start and end year"
@@ -163,6 +166,7 @@ export const Leftbar = (props) => {
             onChange={(e) => { props.setEducation2(e.target.value) }}
           />
           <TextField
+          InputProps={{ style: {fontSize: 13} }}InputLabelProps={{style: { fontSize: 13 } }}
             style={{ width: '96%', marginTop: '14px' }}
             id="outlined-multiline-static"
             label="School followed by start and end year"
@@ -181,8 +185,8 @@ export const Leftbar = (props) => {
           <h3 style={{ marginLeft: '8px' }}>Awards</h3>
         </div>
         <div className="inputsbasic" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', borderBottom: '1px solid rgb(53 52 52)', paddingBottom: '19px', width: '100%' }}>
-          <TextField size="normal" type="text" sx={{ width: '96%', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} value={props.award1} onChange={(e) => { props.setAward1(e.target.value) }} id="outlined-basic" label="Award Title" variant="outlined" />
-          <TextField size="normal" type="text" sx={{ width: '96%', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} value={props.award2} onChange={(e) => { props.setAward2(e.target.value) }} id="outlined-basic" label="Award Title" variant="outlined" />
+          <TextField InputProps={{ style: {fontSize: 13} }}InputLabelProps={{style: { fontSize: 13 } }}size="normal" type="text" sx={{ width: '96%', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} value={props.award1} onChange={(e) => { props.setAward1(e.target.value) }} id="outlined-basic" label="Award Title" variant="outlined" />
+          <TextField InputProps={{ style: {fontSize: 13} }}InputLabelProps={{style: { fontSize: 13 } }}size="normal" type="text" sx={{ width: '96%', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} value={props.award2} onChange={(e) => { props.setAward2(e.target.value) }} id="outlined-basic" label="Award Title" variant="outlined" />
         </div>
       </div>
 
@@ -193,9 +197,9 @@ export const Leftbar = (props) => {
           <h3 style={{ marginLeft: '8px' }}>Certificates</h3>
         </div>
         <div className="inputsbasic" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', borderBottom: '1px solid rgb(53 52 52)', paddingBottom: '19px', width: '100%' }}>
-          <TextField size="normal" type="text" sx={{ width: '96%', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} value={props.cert1} onChange={(e) => { props.setCert1(e.target.value) }} id="outlined-basic" label="Certificate Title" variant="outlined" />
-          <TextField size="normal" type="text" sx={{ width: '96%', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} value={props.cert2} onChange={(e) => { props.setCert2(e.target.value) }} id="outlined-basic" label="Certificate Title" variant="outlined" />
-          <TextField size="normal" type="text" sx={{ width: '96%', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} value={props.cert3} onChange={(e) => { props.setCert3(e.target.value) }} id="outlined-basic" label="Certificate Title" variant="outlined" />
+          <TextField InputProps={{ style: {fontSize: 13} }}InputLabelProps={{style: { fontSize: 13 } }}size="normal" type="text" sx={{ width: '96%', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} value={props.cert1} onChange={(e) => { props.setCert1(e.target.value) }} id="outlined-basic" label="Certificate Title" variant="outlined" />
+          <TextField InputProps={{ style: {fontSize: 13} }}InputLabelProps={{style: { fontSize: 13 } }}size="normal" type="text" sx={{ width: '96%', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} value={props.cert2} onChange={(e) => { props.setCert2(e.target.value) }} id="outlined-basic" label="Certificate Title" variant="outlined" />
+          <TextField InputProps={{ style: {fontSize: 13} }}InputLabelProps={{style: { fontSize: 13 } }}size="normal" type="text" sx={{ width: '96%', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} value={props.cert3} onChange={(e) => { props.setCert3(e.target.value) }} id="outlined-basic" label="Certificate Title" variant="outlined" />
         </div>
       </div>
 
@@ -207,6 +211,7 @@ export const Leftbar = (props) => {
         </div>
         <div className="inputsbasic" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', borderBottom: '1px solid rgb(53 52 52)', paddingBottom: '19px', width: '100%' }}>
           <TextField
+          InputProps={{ style: {fontSize: 13} }}InputLabelProps={{style: { fontSize: 13 } }}
             style={{ width: '96%', marginTop: '11px' }}
             id="outlined-multiline-static"
             label="Project title and description"
@@ -215,6 +220,7 @@ export const Leftbar = (props) => {
             rows={3}
           />
           <TextField
+          InputProps={{ style: {fontSize: 13} }}InputLabelProps={{style: { fontSize: 13 } }}
             style={{ width: '96%', marginTop: '11px' }}
             id="outlined-multiline-static"
             label="Project title and description"
@@ -223,6 +229,7 @@ export const Leftbar = (props) => {
             rows={3}
           />
           <TextField
+          InputProps={{ style: {fontSize: 13} }}InputLabelProps={{style: { fontSize: 13 } }}
             style={{ width: '96%', marginTop: '11px' }}
             id="outlined-multiline-static"
             label="Project title and description"
@@ -240,8 +247,8 @@ export const Leftbar = (props) => {
           <h3 style={{ marginLeft: '8px' }}>Languages</h3>
         </div>
         <div className="inputsbasic" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', borderBottom: '1px solid rgb(53 52 52)', paddingBottom: '19px', width: '100%' }}>
-          <TextField size="normal" type="text" sx={{ width: '96%', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} value={props.lang1} onChange={(e) => { props.setLang1(e.target.value) }} id="outlined-basic" label="Language Title" variant="outlined" />
-          <TextField size="normal" type="text" sx={{ width: '96%', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} id="outlined-basic" label="Language Title" variant="outlined" value={props.lang2} onChange={(e) => { props.setLang2(e.target.value) }} />
+          <TextField InputProps={{ style: {fontSize: 13} }}InputLabelProps={{style: { fontSize: 13 } }}size="normal" type="text" sx={{ width: '96%', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} value={props.lang1} onChange={(e) => { props.setLang1(e.target.value) }} id="outlined-basic" label="Language Title" variant="outlined" />
+          <TextField InputProps={{ style: {fontSize: 13} }}InputLabelProps={{style: { fontSize: 13 } }}size="normal" type="text" sx={{ width: '96%', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} id="outlined-basic" label="Language Title" variant="outlined" value={props.lang2} onChange={(e) => { props.setLang2(e.target.value) }} />
         </div>
       </div>
 
@@ -252,10 +259,10 @@ export const Leftbar = (props) => {
           <h3 style={{ marginLeft: '8px' }}>Skills</h3>
         </div>
         <div className="inputsbasic" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', borderBottom: '1px solid rgb(53 52 52)', paddingBottom: '19px', width: '100%' }}>
-          <TextField size="normal" type="text" sx={{ width: '96%', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} id="outlined-basic" label="Skill title followed by proficiency" variant="outlined" value={props.skill1} onChange={(e) => { props.setSkill1(e.target.value) }} />
-          <TextField size="normal" type="text" sx={{ width: '96%', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} id="outlined-basic" label="Skill title followed by proficiency" variant="outlined" value={props.skill2} onChange={(e) => { props.setSkill2(e.target.value) }} />
-          <TextField size="normal" type="text" sx={{ width: '96%', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} id="outlined-basic" label="Skill title followed by proficiency" variant="outlined" value={props.skill3} onChange={(e) => { props.setSkill3(e.target.value) }} />
-          <TextField size="normal" type="text" sx={{ width: '96%', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} id="outlined-basic" label="Skill title followed by proficiency" variant="outlined" value={props.skill4} onChange={(e) => { props.setSkill4(e.target.value) }} />
+          <TextField InputProps={{ style: {fontSize: 13} }}InputLabelProps={{style: { fontSize: 13 } }}size="normal" type="text" sx={{ width: '96%', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} id="outlined-basic" label="Skill title followed by proficiency" variant="outlined" value={props.skill1} onChange={(e) => { props.setSkill1(e.target.value) }} />
+          <TextField InputProps={{ style: {fontSize: 13} }}InputLabelProps={{style: { fontSize: 13 } }}size="normal" type="text" sx={{ width: '96%', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} id="outlined-basic" label="Skill title followed by proficiency" variant="outlined" value={props.skill2} onChange={(e) => { props.setSkill2(e.target.value) }} />
+          <TextField InputProps={{ style: {fontSize: 13} }}InputLabelProps={{style: { fontSize: 13 } }}size="normal" type="text" sx={{ width: '96%', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} id="outlined-basic" label="Skill title followed by proficiency" variant="outlined" value={props.skill3} onChange={(e) => { props.setSkill3(e.target.value) }} />
+          <TextField InputProps={{ style: {fontSize: 13} }}InputLabelProps={{style: { fontSize: 13 } }}size="normal" type="text" sx={{ width: '96%', marginLeft: '0px', fontSize: '6px', marginTop: '16px' }} id="outlined-basic" label="Skill title followed by proficiency" variant="outlined" value={props.skill4} onChange={(e) => { props.setSkill4(e.target.value) }} />
         </div>
       </div>
 
