@@ -8,8 +8,23 @@ import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import DataObjectIcon from '@mui/icons-material/DataObject';
 import GradeIcon from '@mui/icons-material/Grade';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
 
 export const Right = (props) => {
+
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
   const headerStyle =
   {
     display: 'flex',
@@ -37,22 +52,43 @@ export const Right = (props) => {
 
       </div>
       <div className="butoonsave" style={{ marginTop: '13px', display: 'flex', flexDirection: 'column' }}>
-        <Button variant="outlined" size="medium" style={{ fontFamily: 'PT Sans', border: '1.992px solid rgb(53 52 52)', color: 'white', margin: '9px 12px', fontWeight: 'bold', padding: '10px 12px',fontSize:'12px'  }}>
+        <Button variant="outlined" size="medium" style={{ fontFamily: 'PT Sans', border: '1.992px solid rgb(53 52 52)', color: 'white', margin: '9px 12px', fontWeight: 'bold', padding: '10px 12px', fontSize: '12px' }}>
           <PictureAsPdfIcon style={{ width: '22px', marginRight: '6px' }} />
           Save as PDF
         </Button>
-        <Button variant="outlined" size="medium" style={{ fontFamily: 'PT Sans', border: '1.992px solid rgb(53 52 52)', color: 'white', margin: '9px 12px', fontWeight: 'bold', padding: '10px 12px',fontSize:'12px'  }}>
+        <Button variant="outlined" size="medium" style={{ fontFamily: 'PT Sans', border: '1.992px solid rgb(53 52 52)', color: 'white', margin: '9px 12px', fontWeight: 'bold', padding: '10px 12px', fontSize: '12px' }}>
           <DataObjectIcon style={{ width: '20.85px', marginRight: '6px', marginTop: "-1px" }} />
           Save as JSON
         </Button>
 
         <div className="dbbtns">
-          <Button variant="outlined" size="medium" style={{ fontFamily: 'PT Sans', border: '1.992px solid rgb(53 52 52)', color: 'white', margin: '9px 7px', fontWeight: 'bold', padding: '10px 19px',width:'157px',fontSize:'12px' }} onClick={() => props.uploaddata()}>
-           <GradeIcon style={{marginRight:'6px',width:'19px'}}></GradeIcon> Save
+          <Button variant="outlined" size="medium" style={{ fontFamily: 'PT Sans', border: '1.992px solid rgb(53 52 52)', color: 'white', margin: '9px 7px', fontWeight: 'bold', padding: '10px 19px', width: '157px', fontSize: '12px' }} onClick={() => props.uploaddata()}>
+            <GradeIcon style={{ marginRight: '6px', width: '19px' }}></GradeIcon> Save
           </Button>
-          <Button variant="outlined" size="medium" style={{ fontFamily: 'PT Sans', border: '1.992px solid rgb(53 52 52)', color: 'white', margin: '9px 6px', fontWeight: 'bold', padding: '10px 12px' ,width:'157px',fontSize:'12px' }} onClick={() => props.delete()}>
-           <DeleteOutlineIcon style={{marginRight:'6px',width:'19px'}}></DeleteOutlineIcon> Delete
+          <Button variant="outlined" size="medium" style={{ fontFamily: 'PT Sans', border: '1.992px solid rgb(53 52 52)', color: 'white', margin: '9px 6px', fontWeight: 'bold', padding: '10px 12px', width: '157px', fontSize: '12px' }} onClick={() => handleClickOpen()}>
+            <DeleteOutlineIcon style={{ marginRight: '6px', width: '19px' }}></DeleteOutlineIcon> Delete
           </Button>
+          <Dialog
+            open={open}
+            onClose={handleClose}
+            aria-labelledby="alert-dialog-title"
+            aria-describedby="alert-dialog-description"
+          >
+            <DialogTitle id="alert-dialog-title">
+              {"Are you sure ?"}
+            </DialogTitle>
+            <DialogContent>
+              <DialogContentText id="alert-dialog-description">
+                Resume will be permanently  deleted
+              </DialogContentText>
+            </DialogContent>
+            <DialogActions>
+              <Button onClick={handleClose}>Cancel</Button>
+              <Button onClick={()=>props.delete()} autoFocus>
+                Delete
+              </Button>
+            </DialogActions>
+          </Dialog>
         </div>
       </div>
 

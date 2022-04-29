@@ -109,8 +109,6 @@ export const Edit = (props) => {
         fetchdata();
     }, [])
     const deleteresume = async () => {
-        const c = window.confirm('All data will be deleted ?')
-        if (!c) return
         await deleteDoc(doc(db, "resumes", params.id));
         navigate("/")
     }
