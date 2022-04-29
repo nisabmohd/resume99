@@ -12,8 +12,8 @@ import editpage from '../asset/3.png'
 import editpage1 from '../asset/31.png'
 import editpage2 from '../asset/32.png'
 import toast, { Toaster } from 'react-hot-toast';
-
-
+import InputIcon from '@mui/icons-material/Input';
+import InfoIcon from '@mui/icons-material/Info';
 
 export const Navbar = (props) => {
 
@@ -54,7 +54,7 @@ export const Navbar = (props) => {
   return (
     <div className='navbar' style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', padding: '0 2vw', marginTop: '-18px' }}>
       <div className="logo">
-        <p style={{ fontWeight: '700', fontSize: '30px', color: 'white' }}>resume<span style={{ color: 'rgb(103,118,237)' }}>99</span></p>
+        <p style={{ fontWeight: '700', fontSize: '28px', color: 'white' }}>resume<span style={{ color: 'rgb(103,118,237)' }}>99</span></p>
       </div>
       <Toaster />
       <div className="tags">
@@ -63,7 +63,10 @@ export const Navbar = (props) => {
         <Dialog maxWidth="xl" open={open1} onClose={handleClose1}>
           {/* <DialogTitle>About</DialogTitle> */}
           <DialogContent style={{ textAlign: 'left' }}>
-            <h2>About :</h2>
+            <div className="abouthead" style={{display:'flex',flexDirection:'row',alignItems:'center',justifyContent:'center'}}>
+              <InfoIcon style={{ width: '42px', height: "30px" }} />
+              <h2>About :</h2>
+            </div>
             <p><span style={{ fontWeight: 'bold' }}>resume99</span> is open source resume builder developed by <span style={{ fontWeight: 'bold' }}><a style={{ color: 'white', textDecoration: 'none' }} href="https://github.com/nisabmohd" target="_blank" rel="noreferrer">Mohd Nisab</a></span></p>
             <h5>Features : </h5>
             <li style={{ fontSize: '13px' }}> Save To PDF , Save to JSON , User Friendly , Free forever , No Advertising , No User Tracking , Straight Forward</li>
@@ -82,7 +85,7 @@ export const Navbar = (props) => {
         </Dialog>
         <button style={{ fontFamily: 'PT Sans', fontSize: '15px', fontWeight: '600', textDecoration: 'none', margin: '0 10px', color: 'white', backgroundColor: 'transparent', outline: 'none', border: 'none', cursor: 'pointer' }} onClick={handleClickOpen} >Sign up</button>
         <Dialog open={open} onClose={handleClose}>
-          <DialogTitle>Signup</DialogTitle>
+          <DialogTitle style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}><InputIcon style={{ width: '42px', height: "30px" }} /> Signup</DialogTitle>
           <DialogContent>
             <TextField
               autoFocus
@@ -91,7 +94,7 @@ export const Navbar = (props) => {
               label="Email Address"
               type="email"
               fullWidth
-              variant="standard"
+              variant="outlined"
               value={email}
               onChange={(e) => { setEmail(e.target.value) }}
               sx={{ marginBottom: '16px' }}
@@ -105,7 +108,7 @@ export const Navbar = (props) => {
               fullWidth
               value={password}
               onChange={(e) => { setPassword(e.target.value) }}
-              variant="standard"
+              variant="outlined"
             />
           </DialogContent>
           <DialogActions>

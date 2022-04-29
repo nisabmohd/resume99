@@ -123,6 +123,7 @@ export const Leftbar = (props) => {
             <TextField InputProps={{ style: {fontSize: 13} }}InputLabelProps={{style: { fontSize: 13 } }}sx={{ width: '182px', marginTop: '-4px', marginLeft: '9px', fontSize: '9px' }} id="outlined-basic" label="Postal Code" value={props.postal} onChange={(e) => { props.setPostal(e.target.value) }} variant="outlined" />
           </div>
         </div>
+        
       </div>
 
       <div className="basics" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>

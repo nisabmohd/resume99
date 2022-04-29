@@ -30,7 +30,10 @@ export const Dashboard = () => {
         setOpen(true);
     };
 
-    const handleClose = async () => {
+    const handleClose = () => {
+        setOpen(false)
+    };
+    const handleCreateresume=async()=>{
         if (name === "") {
             toast.error('Please enter a valid resume name');
             return
@@ -49,7 +52,7 @@ export const Dashboard = () => {
         } catch (e) {
             console.error("Error adding document: ", e);
         }
-    };
+    }
     const handleCancelClose = () => {
         setOpen(false);
     };
@@ -61,8 +64,8 @@ export const Dashboard = () => {
         <div className='dashboard' style={{ height: '89vh', width: 'inherit', overflowY: 'scroll', display: 'flex', flexDirection: 'row', gap: '30px', flexWrap: 'wrap', alignContent: 'flex-start',marginLeft:'29px' }}>
             <Toaster />
             <div className='card_create'>
-                <Button variant="outlined" onClick={handleClickOpen} style={{ height: '370px', padding: '0 41px', backgroundColor: '#303030', border: 'none', margin: 'auto',width: '260px', }}>
-                    <img style={{width:'65px'}} src={add} alt="" />
+                <Button variant="outlined" onClick={handleClickOpen} style={{ height: '355px', padding: '0 41px', backgroundColor: '#303030', border: 'none', margin: 'auto',width: '240px', }}>
+                    <img style={{pointerEvents:'none',width:'48px'}} src={add} alt="" />
                 </Button>
                 <Dialog open={open} onClose={handleClose}>
                     <DialogContent>
@@ -85,21 +88,21 @@ export const Dashboard = () => {
                     </DialogContent>
                     <DialogActions>
                         <Button onClick={handleCancelClose}>Cancel</Button>
-                        <Button onClick={handleClose}>Create</Button>
+                        <Button onClick={handleCreateresume}>Create</Button>
                     </DialogActions>
                 </Dialog>
-                <h4 style={{ marginTop: '5px' }}>Create New Resume</h4>
-                <h5 style={{ fontSize: '13px', marginTop: '-9px' }}>Start from scratch</h5>
+                <h4 style={{ marginTop: '8px',fontSize:'14px',textAlign:'left',marginLeft:'6px' }}>Create New Resume</h4>
+                <h6 style={{marginTop: '-9px',fontSize:'12px',textAlign:'left' ,marginLeft:'6px' }}>Start from scratch</h6>
             </div>
             {
                 getall?.map(item => {
                     return (
                         <div key={item.resumename} className='card_create'>
-                            <Button id={item.id} variant="outlined" onClick={(e)=>handleResumeclick(e.target.id)} style={{ height: '370px', width: '260px', padding: '0 41px', backgroundColor: '#303030', border: 'none', color: 'white', fontWeight: 'bold', margin: 'auto' }}>
-                              <img style={{pointerEvents:'none'}} src={edit} alt="" />
+                            <Button id={item.id} variant="outlined" onClick={(e)=>handleResumeclick(e.target.id)} style={{ height: '355px', width: '240px', padding: '0 41px', backgroundColor: '#303030', border: 'none', color: 'white', fontWeight: 'bold', margin: 'auto' }}>
+                              <img style={{pointerEvents:'none',width:'39px'}} src={edit} alt="" />
                             </Button>
-                            <h4 style={{ marginTop: '5px' }}>{item.resumename}</h4>
-                            <h5 style={{ fontSize: '13px', marginTop: '-6px' }}>Edit this resume</h5>
+                            <h4 style={{ marginTop: '8px',fontSize:'14px',textAlign:'left',marginLeft:'6px'  }}>{item.resumename}</h4>
+                            <h5 style={{ marginTop: '-9px',fontSize:'12px',textAlign:'left' ,marginLeft:'6px' }}>Edit this resume</h5>
                         </div>)
                 })
             }

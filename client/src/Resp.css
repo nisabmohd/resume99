@@ -43,15 +43,13 @@ top:17.5px;
 display: none !important;
 }
 
-@media screen and (max-width:1668px){
+/* @media screen and (max-width:1668px){
     .leftbar{
         height: 100vh;
     }
     .rightbar{
-        /* display:none */
     }
     .leftbtn{
-        /* display: block !important; */
     }
 }
 @media screen and (max-width:1252px){
@@ -61,7 +59,6 @@ display: none !important;
 }
 @media screen and (max-width:1213px){
     .leftbtn{
-        /* display: block !important; */
     }
 }
 
@@ -72,4 +69,36 @@ display: none !important;
     .rightbtn{
         display: block !important;
     }
+} */
+.threebox{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: -3px;
+}
+@media screen and (max-width:1559px){
+    .threebox{
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+    }
+    .leftbar{
+     width: 100vw;
+    }
+    .rightbar{
+        overflow-y: scrol;
+        padding-top:9px;
+        padding:0 12px;
+        width:100vw;
+        z-index: 99;
+    }
+    .previewbar{
+        flex:2;
+        overflow-y: scroll;
+        height: 100%;
+        width: 100vw;
+        z-index: -99;
+    }
+    
+
 }

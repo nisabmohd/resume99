@@ -24,7 +24,7 @@ export const LoggedNav = (props) => {
 
     <div className='navbar' style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', padding: '0 2vw', marginTop: '-18px' }}>
       <div className="logo">
-        <p style={{ fontWeight: '700', fontSize: '30px', color: 'white' }}>resume<span style={{ color: 'rgb(103,118,237)' }}>99</span></p>
+        <p style={{ fontWeight: '700', fontSize: '28px', color: 'white' }}>resume<span style={{ color: 'rgb(103,118,237)' }}>99</span></p>
       </div>
       <div className="tags">
         <div className="userlogo">

@@ -12,6 +12,7 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import { setDoc } from "firebase/firestore";
 import { deleteDoc } from "firebase/firestore";
 import { useNavigate } from 'react-router-dom';
+import toast from 'react-hot-toast'
 
 
 export const Edit = (props) => {
@@ -191,14 +192,22 @@ export const Edit = (props) => {
                 userid: JSON.parse(localStorage.getItem('user')).uid
             }
         );
+        toast.success('Saved your resume', {
+            duration: 2000,
+            position: 'top-center',
+            style: {
+                fontFamily: 'Poppins',
+                fontSize: '11px'
+            },
+        });
     }
     return (
-        <div style={{ display: 'flex', flexDirection: 'row', height: '100%', position: 'relative' }}>
+        <div style={{ display: 'flex', flexDirection: 'row', height: '100vh', position: 'relative' }}>
             {/* <LoggedNav setuser={props.setuser} userimg={JSON.parse(localStorage.getItem('user')).photoURL}></LoggedNav> */}
             <LeftNav setuser={props.setuser} userimg={JSON.parse(localStorage.getItem('user')).photoURL} ></LeftNav>
             <button style={{ width: 'fit-content', height: 'fit-content', backgroundColor: 'transparent', outline: 'none', border: 'none', color: 'white', cursor: 'pointer' }}><ChevronRightIcon className='rightbtn'></ChevronRightIcon></button>
             <button style={{ width: 'fit-content', height: 'fit-content', backgroundColor: 'transparent', outline: 'none', border: 'none', color: 'white', cursor: 'pointer' }}><ChevronLeftIcon className='leftbtn'></ChevronLeftIcon></button>
-            <div style={{ display: 'flex', flexDirection: 'row', width: '100%', marginTop: '-3px' }}>
+            <div class="threebox">
                 <div className="leftbar">
                     <Leftbar fullname={fullname} email={email} phone={phone} website={website} headline={headline} summary={summary} address={address} region={region} city={city} postal={postal} country={country} facebook={facebook} instagram={instagram} twitter={twitter} linkedin={linkedin} education1={education1} education2={education2} education3={education3}
                         award1={award1} award2={award2} cert1={cert1} cert2={cert2} cert3={cert3} project1={project1} project2={project2} project3={project3}
