@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/nisabmohd/resume-builder/issues"
   },
-  "homepage": "https://github.com/nisabmohd/resume-builder#readme"
+  "homepage": "https://github.com/nisabmohd/resume-builder#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
 }
