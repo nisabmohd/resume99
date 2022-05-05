@@ -113,6 +113,15 @@ export const Edit = (props) => {
         navigate("/")
     }
 
+    const backendprint=async()=>{
+        const resp= await fetch("http://localhost:5000/oKYOr1bnyte6xa1yrs3h&1")
+        console.log(resp);
+        window.open("http://localhost:5000/download/oKYOr1bnyte6xa1yrs3h&1",'_blank')
+    }
+    const backendjsonget=async()=>{
+        window.open("http://localhost:5000/json/oKYOr1bnyte6xa1yrs3h&1",'_blank')
+    }
+
     const uploaddata = async () => {
         await setDoc(doc(db, "resumes", params.id),
             {
@@ -205,7 +214,7 @@ export const Edit = (props) => {
             <LeftNav setuser={props.setuser} userimg={JSON.parse(localStorage.getItem('user')).photoURL} ></LeftNav>
             <button style={{ width: 'fit-content', height: 'fit-content', backgroundColor: 'transparent', outline: 'none', border: 'none', color: 'white', cursor: 'pointer' }}><ChevronRightIcon className='rightbtn'></ChevronRightIcon></button>
             <button style={{ width: 'fit-content', height: 'fit-content', backgroundColor: 'transparent', outline: 'none', border: 'none', color: 'white', cursor: 'pointer' }}><ChevronLeftIcon className='leftbtn'></ChevronLeftIcon></button>
-            <div class="threebox">
+            <div className="threebox">
                 <div className="leftbar">
                     <Leftbar fullname={fullname} email={email} phone={phone} website={website} headline={headline} summary={summary} address={address} region={region} city={city} postal={postal} country={country} facebook={facebook} instagram={instagram} twitter={twitter} linkedin={linkedin} education1={education1} education2={education2} education3={education3}
                         award1={award1} award2={award2} cert1={cert1} cert2={cert2} cert3={cert3} project1={project1} project2={project2} project3={project3}
@@ -252,7 +261,7 @@ export const Edit = (props) => {
                     <Preview rid={params.id}></Preview>
                 </div>
                 <div className="rightbar">
-                    <Right delete={deleteresume} uploaddata={uploaddata} ></Right>
+                    <Right backendjsonget={backendjsonget} backendprint={backendprint} delete={deleteresume} uploaddata={uploaddata} ></Right>
                 </div>
             </div>
         </div>
